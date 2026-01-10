@@ -32,6 +32,11 @@
             popOpenScroll();
         }
 
+        //공동연구협력 팝업 오픈
+        function cooperationPopOpen(){
+            $("#cooperationPop").fadeIn();
+            popOpenScroll();
+        }
 
         //공동연구협력 팝업 left Tab제어
         function topicSelectSet() {
@@ -916,7 +921,8 @@
                                         <div class="report-tab-box">
                                             <!-- S: 그래프 -->
                                             <div class="report-tab-con" data-box="graph" >
-                                                <div class="chart-box">
+                                                <!-- 팝업 오픈 임시 영역 추후 해당 함수 호출 -->
+                                                <div class="chart-box pointer" onclick="cooperationPopOpen();">
                                                     <!-- 차트 영역 - 퍼블은 이미지 대체 -->
                                                     <img src="../resources/images/sample/sample_graph08.png"/>
                                                 </div>
@@ -1024,13 +1030,1007 @@
 
                         <!-- S:국내 분석 -->
                         <div class="view-tab-con" data-page="internal">
-                            2
+                            <div class="join-form">
+                                <!-- S: 국내 협력 논문 수 -->
+                                <div class="join-box">
+                                    <div class="report-filter-form">
+                                        <div class="filter-form">
+                                            <div class="filter-title-box">
+                                                <div class="title">
+                                                    국내 협력 논문 수
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="filter-right">
+                                                <button type="button" class="excel-btn">
+                                                    <img src="../resources/images/contents/excel_ico.png"/>
+                                                </button>
+                                                <ul class="filter-tab">
+                                                    <li class="filter-tab-con graph-type active" data-value="graph" >
+                                                        <i></i>
+                                                    </li>
+                                                    <li class="filter-tab-con columns-type " data-value="columns">
+                                                        <i></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="report-tab-box">
+                                            <!-- S: 그래프 -->
+                                            <div class="report-tab-con" data-box="graph" >
+                                                <div class="chart-box">
+                                                    <!-- 차트 영역 - 퍼블은 이미지 대체 -->
+                                                    <img src="../resources/images/sample/sample_graph07.png"/>
+                                                </div>
+                                            </div>
+                                            <!-- E: 그래프 -->
+
+                                            <!-- S: 컬럼 -->
+                                            <div class="report-tab-con" data-box="columns" >
+                                                <div class="columns-tbl-form">
+                                                    <div class="columns-tbl">
+                                                        <div class="columns-tbl-head">
+                                                            <ul class="columns-head">
+                                                                <li class="columns-th">#</li>
+                                                                <li class="columns-th">주제</li>
+                                                                <li class="columns-th">논문수</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="columns-tbl-body">
+                                                            <!-- S: loop -->
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">1</li>
+                                                                <li class="columns-td">내과</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+                                                            <!-- E: loop -->
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">2</li>
+                                                                <li class="columns-td">유방암</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">3</li>
+                                                                <li class="columns-td">코로나19</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">4</li>
+                                                                <li class="columns-td">딥러닝</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">5</li>
+                                                                <li class="columns-td">인공지능</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">6</li>
+                                                                <li class="columns-td">전기촉매</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <!-- E: 컬럼 -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- E: 국내 협력 논문 수 -->
+
+                                <!-- S: 국내 협력 상위 연구자 -->
+                                <div class="join-box">
+                                    <div class="report-filter-form">
+                                        <div class="filter-form">
+                                            <div class="filter-title-box">
+                                                <div class="title">
+                                                    국내 협력 상위 연구자
+                                                </div>
+                                                <div class="sub">
+                                                    총 8명
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="filter-right">
+                                                <button type="button" class="excel-btn">
+                                                    <img src="../resources/images/contents/excel_ico.png"/>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="report-tab-box">
+                                            <div class="researcher-list-form">
+                                                <ul class="researcher-list-box">
+                                                    <li class="researcher-list-con">
+                                                        <div class="profile-box">
+                                                            <div class="img-box">
+                                                                <img src="../resources/images/contents/user_gray.png"/>
+                                                            </div>
+                                                            <div class="profile-info">
+                                                                <div class="name">현택환</div>
+                                                                <div class="group">서울대학교 의과대학</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="profile-status">
+                                                            <div class="count">
+                                                                <span>42</span>건 협력
+                                                            </div>
+                                                            <div class="progress">
+                                                                <!-- data value 값에 따라 bar의 width값 % -->
+                                                                <div class="bar-box" data-value="95">
+                                                                    <div class="bar"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="researcher-list-con">
+                                                        <div class="profile-box">
+                                                            <div class="img-box">
+                                                                <img src="../resources/images/contents/user_gray.png"/>
+                                                            </div>
+                                                            <div class="profile-info">
+                                                                <div class="name">현택환</div>
+                                                                <div class="group">서울대학교 의과대학</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="profile-status">
+                                                            <div class="count">
+                                                                <span>42</span>건 협력
+                                                            </div>
+                                                            <div class="progress">
+                                                                <!-- data value 값에 따라 bar의 width값 % -->
+                                                                <div class="bar-box" data-value="95">
+                                                                    <div class="bar"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="researcher-list-con">
+                                                        <div class="profile-box">
+                                                            <div class="img-box">
+                                                                <img src="../resources/images/contents/user_gray.png"/>
+                                                            </div>
+                                                            <div class="profile-info">
+                                                                <div class="name">현택환</div>
+                                                                <div class="group">서울대학교 의과대학</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="profile-status">
+                                                            <div class="count">
+                                                                <span>42</span>건 협력
+                                                            </div>
+                                                            <div class="progress">
+                                                                <!-- data value 값에 따라 bar의 width값 % -->
+                                                                <div class="bar-box" data-value="95">
+                                                                    <div class="bar"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="researcher-list-con">
+                                                        <div class="profile-box">
+                                                            <div class="img-box">
+                                                                <img src="../resources/images/contents/user_gray.png"/>
+                                                            </div>
+                                                            <div class="profile-info">
+                                                                <div class="name">현택환</div>
+                                                                <div class="group">서울대학교 의과대학</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="profile-status">
+                                                            <div class="count">
+                                                                <span>42</span>건 협력
+                                                            </div>
+                                                            <div class="progress">
+                                                                <!-- data value 값에 따라 bar의 width값 % -->
+                                                                <div class="bar-box" data-value="95">
+                                                                    <div class="bar"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="researcher-list-con">
+                                                        <div class="profile-box">
+                                                            <div class="img-box">
+                                                                <img src="../resources/images/contents/user_gray.png"/>
+                                                            </div>
+                                                            <div class="profile-info">
+                                                                <div class="name">현택환</div>
+                                                                <div class="group">서울대학교 의과대학</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="profile-status">
+                                                            <div class="count">
+                                                                <span>42</span>건 협력
+                                                            </div>
+                                                            <div class="progress">
+                                                                <!-- data value 값에 따라 bar의 width값 % -->
+                                                                <div class="bar-box" data-value="95">
+                                                                    <div class="bar"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="researcher-list-con">
+                                                        <div class="profile-box">
+                                                            <div class="img-box">
+                                                                <img src="../resources/images/contents/user_gray.png"/>
+                                                            </div>
+                                                            <div class="profile-info">
+                                                                <div class="name">현택환</div>
+                                                                <div class="group">서울대학교 의과대학</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="profile-status">
+                                                            <div class="count">
+                                                                <span>42</span>건 협력
+                                                            </div>
+                                                            <div class="progress">
+                                                                <!-- data value 값에 따라 bar의 width값 % -->
+                                                                <div class="bar-box" data-value="95">
+                                                                    <div class="bar"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- E: 국내 협력 상위 연구자 -->
+
+                                <!-- S: 공과대학 국내 협력 인기주제 -->
+                                <div class="join-box">
+                                    <div class="report-filter-form">
+                                        <div class="filter-form">
+                                            <div class="filter-title-box">
+                                                <div class="title">
+                                                    공과대학 국내 협력 인기주제
+                                                </div>
+                                                <div class="sub">
+                                                    8명
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="filter-right">
+                                                <button type="button" class="excel-btn">
+                                                    <img src="../resources/images/contents/excel_ico.png"/>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="report-tab-box">
+                                            <div class="columns-tbl-form">
+                                                <div class="columns-tbl">
+                                                    <div class="columns-tbl-head">
+                                                        <ul class="columns-head" >
+                                                            <li class="columns-th">#</li>
+                                                            <li class="columns-th">주제</li>
+                                                            <li class="columns-th">논문수</li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="columns-tbl-body">
+                                                        <!-- S: loop -->
+                                                        <ul class="columns-body" >
+                                                            <li class="columns-td">1</li>
+                                                            <li class="columns-td" onclick="thesisPopOpen();">내과</li>
+                                                            <li class="columns-td">512</li>
+                                                        </ul>
+                                                        <!-- E: loop -->
+
+                                                        <ul class="columns-body">
+                                                            <li class="columns-td">2</li>
+                                                            <li class="columns-td" onclick="thesisPopOpen();">유방암</li>
+                                                            <li class="columns-td">512</li>
+                                                        </ul>
+
+                                                        <ul class="columns-body">
+                                                            <li class="columns-td">3</li>
+                                                            <li class="columns-td" onclick="thesisPopOpen();">코로나19</li>
+                                                            <li class="columns-td">512</li>
+                                                        </ul>
+
+                                                        <ul class="columns-body">
+                                                            <li class="columns-td">4</li>
+                                                            <li class="columns-td" onclick="thesisPopOpen();">딥러닝</li>
+                                                            <li class="columns-td">512</li>
+                                                        </ul>
+
+                                                        <ul class="columns-body">
+                                                            <li class="columns-td">5</li>
+                                                            <li class="columns-td" onclick="thesisPopOpen();">인공지능</li>
+                                                            <li class="columns-td">512</li>
+                                                        </ul>
+
+                                                        <ul class="columns-body">
+                                                            <li class="columns-td">6</li>
+                                                            <li class="columns-td" onclick="thesisPopOpen();">전기촉매</li>
+                                                            <li class="columns-td">512</li>
+                                                        </ul>
+
+                                                        <ul class="columns-body">
+                                                            <li class="columns-td">7</li>
+                                                            <li class="columns-td" onclick="thesisPopOpen();">전기촉매</li>
+                                                            <li class="columns-td">512</li>
+                                                        </ul>
+
+                                                        <ul class="columns-body">
+                                                            <li class="columns-td">8</li>
+                                                            <li class="columns-td" onclick="thesisPopOpen();">전기촉매</li>
+                                                            <li class="columns-td">512</li>
+                                                        </ul>
+
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- E: 공과대학 국내 협력 인기주제 -->
+
+                                <!-- S: 공과대학 국내 협력 기관 -->
+                                <div class="join-box">
+                                    <div class="report-filter-form">
+                                        <div class="filter-form">
+                                            <div class="filter-title-box">
+                                                <div class="title">
+                                                    공과대학 국내 협력 기관
+                                                </div>
+                                                <div class="sub">
+                                                    8명
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="filter-right">
+                                                <button type="button" class="excel-btn">
+                                                    <img src="../resources/images/contents/excel_ico.png"/>
+                                                </button>
+                                                <ul class="filter-tab">
+                                                    <li class="filter-tab-con graph-type active" data-value="graph" >
+                                                        <i></i>
+                                                    </li>
+                                                    <li class="filter-tab-con columns-type " data-value="columns">
+                                                        <i></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="report-tab-box">
+                                            <!-- S: 그래프 -->
+                                            <div class="report-tab-con" data-box="graph" >
+                                                <!-- 팝업 오픈 임시 영역 추후 해당 함수 호출 -->
+                                                <div class="chart-box pointer" onclick="cooperationPopOpen();">
+                                                    <!-- 차트 영역 - 퍼블은 이미지 대체 -->
+                                                    <img src="../resources/images/sample/sample_graph08.png"/>
+                                                </div>
+                                            </div>
+                                            <!-- E: 그래프 -->
+
+                                            <!-- S: 컬럼 -->
+                                            <div class="report-tab-con" data-box="columns" >
+                                                <div class="search-tbl-form">
+                                                    <div class="search-form">
+                                                        <i>
+                                                            <img src="../resources/images/common/search_ico.png"/>
+                                                        </i>
+                                                        <input type="text" placeholder="연구 주제 또는 키워드를 입력하세요" />
+                                                    </div>
+
+                                                    <div class="search-list-tbl">
+                                                        <div class="list-filter">
+                                                            <div class="tbl-title">
+                                                                협력기관  데이터
+                                                            </div>
+                                                            <div class="select-form">
+                                                                <div class="select-box">
+                                                                    <div class="choice-box">논문수 높임 순</div>
+                                                                    <ul class="select-list">
+                                                                        <li class="option ">선택</li>
+                                                                        <li class="option active">논문수 높임 순</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="list-tbl-form">
+                                                            <div class="list-tbl-head">
+                                                                <ul class="list-tbl-row">
+                                                                    <li class="list-tbl-cell">협력기관</li>
+                                                                    <li class="list-tbl-cell">논문 수</li>
+                                                                    <li class="list-tbl-cell">연구자 수</li>
+                                                                </ul>
+                                                            </div>
+
+                                                            <div class="list-tbl-body">
+                                                                <!-- S: loop -->
+                                                                <ul class="list-tbl-row">
+                                                                    <li class="list-tbl-cell">
+                                                                        <div class="td-title">간호대학</div>
+                                                                        <div class="td-txt">
+                                                                            대학 설명문구 
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="list-tbl-cell">1,240</li>
+                                                                    <li class="list-tbl-cell">24</li>
+                                                                </ul>
+                                                                <!-- E: loop -->
+
+                                                                <ul class="list-tbl-row">
+                                                                    <li class="list-tbl-cell">
+                                                                        <div class="td-title">간호대학</div>
+                                                                        <div class="td-txt">
+                                                                            대학 설명문구 
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="list-tbl-cell">1,240</li>
+                                                                    <li class="list-tbl-cell">24</li>
+                                                                </ul>
+
+                                                                <ul class="list-tbl-row">
+                                                                    <li class="list-tbl-cell">
+                                                                        <div class="td-title">간호대학</div>
+                                                                        <div class="td-txt">
+                                                                            대학 설명문구 
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="list-tbl-cell">1,240</li>
+                                                                    <li class="list-tbl-cell">24</li>
+                                                                </ul>
+
+                                                                <ul class="list-tbl-row">
+                                                                    <li class="list-tbl-cell">
+                                                                        <div class="td-title">간호대학</div>
+                                                                        <div class="td-txt">
+                                                                            대학 설명문구 
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="list-tbl-cell">1,240</li>
+                                                                    <li class="list-tbl-cell">24</li>
+                                                                </ul>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                                
+                                            </div>
+                                            <!-- E: 컬럼 -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- E: 공과대학 국내 협력 기관 -->
+                            </div>
                         </div>
                         <!-- S:국내 분석 -->
 
                         <!-- S:국제 분석 -->
                         <div class="view-tab-con" data-page="international">
-                            3
+                            <div class="join-form">
+                                <!-- S: 국제 협력 논문 수 -->
+                                <div class="join-box">
+                                    <div class="report-filter-form">
+                                        <div class="filter-form">
+                                            <div class="filter-title-box">
+                                                <div class="title">
+                                                    국제 협력 논문 수
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="filter-right">
+                                                <button type="button" class="excel-btn">
+                                                    <img src="../resources/images/contents/excel_ico.png"/>
+                                                </button>
+                                                <ul class="filter-tab">
+                                                    <li class="filter-tab-con graph-type active" data-value="graph" >
+                                                        <i></i>
+                                                    </li>
+                                                    <li class="filter-tab-con columns-type " data-value="columns">
+                                                        <i></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="report-tab-box">
+                                            <!-- S: 그래프 -->
+                                            <div class="report-tab-con" data-box="graph" >
+                                                <div class="chart-box">
+                                                    <!-- 차트 영역 - 퍼블은 이미지 대체 -->
+                                                    <img src="../resources/images/sample/sample_graph07.png"/>
+                                                </div>
+                                            </div>
+                                            <!-- E: 그래프 -->
+
+                                            <!-- S: 컬럼 -->
+                                            <div class="report-tab-con" data-box="columns" >
+                                                <div class="columns-tbl-form">
+                                                    <div class="columns-tbl">
+                                                        <div class="columns-tbl-head">
+                                                            <ul class="columns-head">
+                                                                <li class="columns-th">#</li>
+                                                                <li class="columns-th">주제</li>
+                                                                <li class="columns-th">논문수</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="columns-tbl-body">
+                                                            <!-- S: loop -->
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">1</li>
+                                                                <li class="columns-td">내과</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+                                                            <!-- E: loop -->
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">2</li>
+                                                                <li class="columns-td">유방암</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">3</li>
+                                                                <li class="columns-td">코로나19</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">4</li>
+                                                                <li class="columns-td">딥러닝</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">5</li>
+                                                                <li class="columns-td">인공지능</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">6</li>
+                                                                <li class="columns-td">전기촉매</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <!-- E: 컬럼 -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- E: 국제 협력 논문 수 -->
+
+                                <!-- S: 국제 협력 상위 연구자 -->
+                                <div class="join-box">
+                                    <div class="report-filter-form">
+                                        <div class="filter-form">
+                                            <div class="filter-title-box">
+                                                <div class="title">
+                                                    국제 협력 상위 연구자
+                                                </div>
+                                                <div class="sub">
+                                                    총 8명
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="filter-right">
+                                                <button type="button" class="excel-btn">
+                                                    <img src="../resources/images/contents/excel_ico.png"/>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="report-tab-box">
+                                            <div class="researcher-list-form">
+                                                <ul class="researcher-list-box">
+                                                    <li class="researcher-list-con">
+                                                        <div class="profile-box">
+                                                            <div class="img-box">
+                                                                <img src="../resources/images/contents/user_gray.png"/>
+                                                            </div>
+                                                            <div class="profile-info">
+                                                                <div class="name">현택환</div>
+                                                                <div class="group">서울대학교 의과대학</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="profile-status">
+                                                            <div class="count">
+                                                                <span>42</span>건 협력
+                                                            </div>
+                                                            <div class="progress">
+                                                                <!-- data value 값에 따라 bar의 width값 % -->
+                                                                <div class="bar-box" data-value="95">
+                                                                    <div class="bar"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="researcher-list-con">
+                                                        <div class="profile-box">
+                                                            <div class="img-box">
+                                                                <img src="../resources/images/contents/user_gray.png"/>
+                                                            </div>
+                                                            <div class="profile-info">
+                                                                <div class="name">현택환</div>
+                                                                <div class="group">서울대학교 의과대학</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="profile-status">
+                                                            <div class="count">
+                                                                <span>42</span>건 협력
+                                                            </div>
+                                                            <div class="progress">
+                                                                <!-- data value 값에 따라 bar의 width값 % -->
+                                                                <div class="bar-box" data-value="95">
+                                                                    <div class="bar"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="researcher-list-con">
+                                                        <div class="profile-box">
+                                                            <div class="img-box">
+                                                                <img src="../resources/images/contents/user_gray.png"/>
+                                                            </div>
+                                                            <div class="profile-info">
+                                                                <div class="name">현택환</div>
+                                                                <div class="group">서울대학교 의과대학</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="profile-status">
+                                                            <div class="count">
+                                                                <span>42</span>건 협력
+                                                            </div>
+                                                            <div class="progress">
+                                                                <!-- data value 값에 따라 bar의 width값 % -->
+                                                                <div class="bar-box" data-value="95">
+                                                                    <div class="bar"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="researcher-list-con">
+                                                        <div class="profile-box">
+                                                            <div class="img-box">
+                                                                <img src="../resources/images/contents/user_gray.png"/>
+                                                            </div>
+                                                            <div class="profile-info">
+                                                                <div class="name">현택환</div>
+                                                                <div class="group">서울대학교 의과대학</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="profile-status">
+                                                            <div class="count">
+                                                                <span>42</span>건 협력
+                                                            </div>
+                                                            <div class="progress">
+                                                                <!-- data value 값에 따라 bar의 width값 % -->
+                                                                <div class="bar-box" data-value="95">
+                                                                    <div class="bar"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="researcher-list-con">
+                                                        <div class="profile-box">
+                                                            <div class="img-box">
+                                                                <img src="../resources/images/contents/user_gray.png"/>
+                                                            </div>
+                                                            <div class="profile-info">
+                                                                <div class="name">현택환</div>
+                                                                <div class="group">서울대학교 의과대학</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="profile-status">
+                                                            <div class="count">
+                                                                <span>42</span>건 협력
+                                                            </div>
+                                                            <div class="progress">
+                                                                <!-- data value 값에 따라 bar의 width값 % -->
+                                                                <div class="bar-box" data-value="95">
+                                                                    <div class="bar"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="researcher-list-con">
+                                                        <div class="profile-box">
+                                                            <div class="img-box">
+                                                                <img src="../resources/images/contents/user_gray.png"/>
+                                                            </div>
+                                                            <div class="profile-info">
+                                                                <div class="name">현택환</div>
+                                                                <div class="group">서울대학교 의과대학</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="profile-status">
+                                                            <div class="count">
+                                                                <span>42</span>건 협력
+                                                            </div>
+                                                            <div class="progress">
+                                                                <!-- data value 값에 따라 bar의 width값 % -->
+                                                                <div class="bar-box" data-value="95">
+                                                                    <div class="bar"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- E: 국제 협력 상위 연구자 -->
+
+                                <!-- S: 공과대학 국제 협력 인기주제 -->
+                                <div class="join-box">
+                                    <div class="report-filter-form">
+                                        <div class="filter-form">
+                                            <div class="filter-title-box">
+                                                <div class="title">
+                                                    공과대학 국제 협력 인기주제
+                                                </div>
+                                                <div class="sub">
+                                                    8명
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="filter-right">
+                                                <button type="button" class="excel-btn">
+                                                    <img src="../resources/images/contents/excel_ico.png"/>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="report-tab-box">
+                                            <div class="columns-tbl-form">
+                                                <div class="columns-tbl">
+                                                    <div class="columns-tbl-head">
+                                                        <ul class="columns-head" >
+                                                            <li class="columns-th">#</li>
+                                                            <li class="columns-th">주제</li>
+                                                            <li class="columns-th">논문수</li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="columns-tbl-body">
+                                                        <!-- S: loop -->
+                                                        <ul class="columns-body" >
+                                                            <li class="columns-td">1</li>
+                                                            <li class="columns-td" onclick="thesisPopOpen();">내과</li>
+                                                            <li class="columns-td">512</li>
+                                                        </ul>
+                                                        <!-- E: loop -->
+
+                                                        <ul class="columns-body">
+                                                            <li class="columns-td">2</li>
+                                                            <li class="columns-td" onclick="thesisPopOpen();">유방암</li>
+                                                            <li class="columns-td">512</li>
+                                                        </ul>
+
+                                                        <ul class="columns-body">
+                                                            <li class="columns-td">3</li>
+                                                            <li class="columns-td" onclick="thesisPopOpen();">코로나19</li>
+                                                            <li class="columns-td">512</li>
+                                                        </ul>
+
+                                                        <ul class="columns-body">
+                                                            <li class="columns-td">4</li>
+                                                            <li class="columns-td" onclick="thesisPopOpen();">딥러닝</li>
+                                                            <li class="columns-td">512</li>
+                                                        </ul>
+
+                                                        <ul class="columns-body">
+                                                            <li class="columns-td">5</li>
+                                                            <li class="columns-td" onclick="thesisPopOpen();">인공지능</li>
+                                                            <li class="columns-td">512</li>
+                                                        </ul>
+
+                                                        <ul class="columns-body">
+                                                            <li class="columns-td">6</li>
+                                                            <li class="columns-td" onclick="thesisPopOpen();">전기촉매</li>
+                                                            <li class="columns-td">512</li>
+                                                        </ul>
+
+                                                        <ul class="columns-body">
+                                                            <li class="columns-td">7</li>
+                                                            <li class="columns-td" onclick="thesisPopOpen();">전기촉매</li>
+                                                            <li class="columns-td">512</li>
+                                                        </ul>
+
+                                                        <ul class="columns-body">
+                                                            <li class="columns-td">8</li>
+                                                            <li class="columns-td" onclick="thesisPopOpen();">전기촉매</li>
+                                                            <li class="columns-td">512</li>
+                                                        </ul>
+
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- E: 공과대학 국제 협력 인기주제 -->
+
+                                <!-- S: 공과대학 국제 협력 기관 -->
+                                <div class="join-box">
+                                    <div class="report-filter-form">
+                                        <div class="filter-form">
+                                            <div class="filter-title-box">
+                                                <div class="title">
+                                                    공과대학 국제 협력 기관
+                                                </div>
+                                                <div class="sub">
+                                                    8명
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="filter-right">
+                                                <button type="button" class="excel-btn">
+                                                    <img src="../resources/images/contents/excel_ico.png"/>
+                                                </button>
+                                                <ul class="filter-tab">
+                                                    <li class="filter-tab-con graph-type active" data-value="graph" >
+                                                        <i></i>
+                                                    </li>
+                                                    <li class="filter-tab-con columns-type " data-value="columns">
+                                                        <i></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="report-tab-box">
+                                            <!-- S: 그래프 -->
+                                            <div class="report-tab-con" data-box="graph" >
+                                                <!-- 팝업 오픈 임시 영역 추후 해당 함수 호출 -->
+                                                <div class="chart-box pointer" onclick="cooperationPopOpen();">
+                                                    <!-- 차트 영역 - 퍼블은 이미지 대체 -->
+                                                    <img src="../resources/images/sample/sample_graph08.png"/>
+                                                </div>
+                                            </div>
+                                            <!-- E: 그래프 -->
+
+                                            <!-- S: 컬럼 -->
+                                            <div class="report-tab-con" data-box="columns" >
+                                                <div class="search-tbl-form">
+                                                    <div class="search-form">
+                                                        <i>
+                                                            <img src="../resources/images/common/search_ico.png"/>
+                                                        </i>
+                                                        <input type="text" placeholder="연구 주제 또는 키워드를 입력하세요" />
+                                                    </div>
+
+                                                    <div class="search-list-tbl">
+                                                        <div class="list-filter">
+                                                            <div class="tbl-title">
+                                                                협력기관  데이터
+                                                            </div>
+                                                            <div class="select-form">
+                                                                <div class="select-box">
+                                                                    <div class="choice-box">논문수 높임 순</div>
+                                                                    <ul class="select-list">
+                                                                        <li class="option ">선택</li>
+                                                                        <li class="option active">논문수 높임 순</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="list-tbl-form">
+                                                            <div class="list-tbl-head">
+                                                                <ul class="list-tbl-row">
+                                                                    <li class="list-tbl-cell">협력기관</li>
+                                                                    <li class="list-tbl-cell">논문 수</li>
+                                                                    <li class="list-tbl-cell">연구자 수</li>
+                                                                </ul>
+                                                            </div>
+
+                                                            <div class="list-tbl-body">
+                                                                <!-- S: loop -->
+                                                                <ul class="list-tbl-row">
+                                                                    <li class="list-tbl-cell">
+                                                                        <div class="td-title">간호대학</div>
+                                                                        <div class="td-txt">
+                                                                            대학 설명문구 
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="list-tbl-cell">1,240</li>
+                                                                    <li class="list-tbl-cell">24</li>
+                                                                </ul>
+                                                                <!-- E: loop -->
+
+                                                                <ul class="list-tbl-row">
+                                                                    <li class="list-tbl-cell">
+                                                                        <div class="td-title">간호대학</div>
+                                                                        <div class="td-txt">
+                                                                            대학 설명문구 
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="list-tbl-cell">1,240</li>
+                                                                    <li class="list-tbl-cell">24</li>
+                                                                </ul>
+
+                                                                <ul class="list-tbl-row">
+                                                                    <li class="list-tbl-cell">
+                                                                        <div class="td-title">간호대학</div>
+                                                                        <div class="td-txt">
+                                                                            대학 설명문구 
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="list-tbl-cell">1,240</li>
+                                                                    <li class="list-tbl-cell">24</li>
+                                                                </ul>
+
+                                                                <ul class="list-tbl-row">
+                                                                    <li class="list-tbl-cell">
+                                                                        <div class="td-title">간호대학</div>
+                                                                        <div class="td-txt">
+                                                                            대학 설명문구 
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="list-tbl-cell">1,240</li>
+                                                                    <li class="list-tbl-cell">24</li>
+                                                                </ul>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                                
+                                            </div>
+                                            <!-- E: 컬럼 -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- E: 공과대학 국제 협력 기관 -->
+                            </div>
                         </div>
                         <!-- S:국제 분석 -->
                     </div>
@@ -1321,7 +2321,7 @@
     <!-- E:팝업  [국내] 연구 인기주제  -->
 
     <!-- S:팝업  공과대학- 고려대학교 공동연구협력   -->
-    <div class="layer-pop" id="cooperationPop" style="display: block;">
+    <div class="layer-pop" id="cooperationPop">
         <div class="dim"></div>
         <div class="layer-form">
             <div class="layer-box">
@@ -1456,12 +2456,13 @@
                                 <div class="topic-box">
                                     <div class="topic-con">
                                         <div class="topic-con-head">
-                                            <div class="title">머신러닝232322d</div>
+                                            <div class="title">머신러닝</div>
                                             <div class="sub">
                                                 총 <span class="thesis-count">8</span>개 논문
                                             </div>
                                         </div>
 
+                                        <!-- S: filter  -->
                                         <div class="topic-list-filter">
                                             <div class="check-form">
                                                 <div class="filter-title">
@@ -1469,32 +2470,32 @@
                                                 </div>
                                                 <ul class="check-box">
                                                     <li class="check-con">
-                                                        <input type="checkbox" id="checkSample01" />
-                                                        <label for="checkSample01">
+                                                        <input type="checkbox" id="checkSample05" />
+                                                        <label for="checkSample05">
                                                             <i></i>
                                                             <div class="check-txt">HCP</div>
                                                         </label>
                                                     </li>
 
                                                     <li class="check-con">
-                                                        <input type="checkbox" id="checkSample02" />
-                                                        <label for="checkSample02">
+                                                        <input type="checkbox" id="checkSample06" />
+                                                        <label for="checkSample06">
                                                             <i></i>
                                                             <div class="check-txt">HP</div>
                                                         </label>
                                                     </li>
 
                                                     <li class="check-con">
-                                                        <input type="checkbox" id="checkSample03" />
-                                                        <label for="checkSample03">
+                                                        <input type="checkbox" id="checkSample07" />
+                                                        <label for="checkSample07">
                                                             <i></i>
                                                             <div class="check-txt">Q1</div>
                                                         </label>
                                                     </li>
 
                                                     <li class="check-con">
-                                                        <input type="checkbox" id="checkSample04" />
-                                                        <label for="checkSample04">
+                                                        <input type="checkbox" id="checkSample08" />
+                                                        <label for="checkSample08">
                                                             <i></i>
                                                             <div class="check-txt">Q2</div>
                                                         </label>
@@ -1512,6 +2513,126 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- E: filter  -->
+
+                                        <!--S: table -->
+                                        <div class="topic-tbl-form">
+                                            <div class="topic-tbl-box">
+                                                <table class="topic-tbl">
+                                                    <colgroup>
+                                                        <col width=""/>
+                                                        <col width="15%"/>
+                                                        <col width="47px"/>
+                                                        <col width="70px"/>
+                                                        <col width="66px"/>
+                                                    </colgroup>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>제목</th>
+                                                            <th>저자</th>
+                                                            <th>연도</th>
+                                                            <th>인용</th>
+                                                            <th>분류</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="">
+                                                                    Advanced machine Learning Techniques for Pattern Recognition
+                                                                </a>
+                                                            </td>
+                                                            <td>
+                                                                김철수, 이영희
+                                                            </td>
+                                                            <td>2024</td>
+                                                            <td>45</td>
+                                                            <td>
+                                                                <div class="bage-box">
+                                                                    <div class="bage red-bage">HCP</div>
+                                                                    <div class="bage blue-bage">Q1</div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="">
+                                                                    Advanced machine Learning Techniques for Pattern Recognition
+                                                                </a>
+                                                            </td>
+                                                            <td>
+                                                                김철수, 이영희
+                                                            </td>
+                                                            <td>2024</td>
+                                                            <td>45</td>
+                                                            <td>
+                                                                <div class="bage-box">
+                                                                    <div class="bage orange-bage">HP</div>
+                                                                    <div class="bage blue-bage">Q1</div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="">
+                                                                    Advanced machine Learning Techniques for Pattern Recognition
+                                                                </a>
+                                                            </td>
+                                                            <td>
+                                                                김철수, 이영희
+                                                            </td>
+                                                            <td>2024</td>
+                                                            <td>45</td>
+                                                            <td>
+                                                                <div class="bage-box">
+                                                                    <div class="bage red-bage">HCP</div>
+                                                                    <div class="bage blue-bage">Q1</div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="">
+                                                                    Advanced machine Learning Techniques for Pattern Recognition
+                                                                </a>
+                                                            </td>
+                                                            <td>
+                                                                김철수, 이영희
+                                                            </td>
+                                                            <td>2024</td>
+                                                            <td>45</td>
+                                                            <td>
+                                                                <div class="bage-box">
+                                                                    <div class="bage green-bage">Q2</div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <a href="">
+                                                                    Advanced machine Learning Techniques for Pattern Recognition
+                                                                </a>
+                                                            </td>
+                                                            <td>
+                                                                김철수, 이영희
+                                                            </td>
+                                                            <td>2024</td>
+                                                            <td>45</td>
+                                                            <td>
+                                                                <div class="bage-box">
+                                                                    <div class="bage red-bage">HCP</div>
+                                                                    <div class="bage blue-bage">Q1</div>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="tbl-count">
+                                                총 <span>5</span>개의 논문
+                                            </div>
+                                        </div>
+                                        <!--E: table -->
 
                                     </div>
                                 </div>

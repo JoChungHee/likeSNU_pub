@@ -2760,6 +2760,21 @@
     border-top:0.0625rem solid #e5e8eb;
 }
 
+.report .lnb-form .lnb-box .lnb-con .lnb-title{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.report .lnb-form .lnb-box .lnb-con .lnb-title.active::after{
+    content:"";
+    display: block;
+    width:0.375rem;
+    height:0.625rem;
+    background:url("../images/contents/lnb_arrow.png") no-repeat center;
+    background-size: contain;
+}
+
 .report .lnb-form .lnb-box .lnb-con .lnb-title a{
     font-size:1rem;
     font-weight:700;
@@ -3686,9 +3701,17 @@
     border-radius: 0.3125rem;
 }
 
+/* 인용저널 분석 */
+.report-head .college-select-form{
+    display:flex;
+    align-items: center;
+}
 
-
-
+.report-head .college-select-form .title{
+    font-size:0.875rem;
+    font-weight: 600;
+    color:#656a71;
+}
 
 
 
@@ -3920,6 +3943,7 @@
     border-radius: 0.625rem;
     background:#f9fafb;
     display:flex;
+    flex-wrap: wrap;
 }
 
 #cooperationPop .topic-form .topic-list-form{
@@ -4082,17 +4106,126 @@
     letter-spacing: -0.2px;
 }
 
+#cooperationPop .topic-form .topic-box .topic-con .topic-list-filter{
+    width:100%;
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top:1.2rem;
+    border-top:0.0625rem solid #f6f7f9;
+    border-bottom:0.0625rem solid #f6f7f9;
+    padding:0.75rem 0;
+    gap:1rem;
+}
 
+#cooperationPop .topic-form .topic-box .topic-con .topic-list-filter .check-form{
+    display:flex;
+    align-items: center;
+    gap:0.875rem;
+    width:calc( 100% - 8.5rem );
+}
 
+#cooperationPop .topic-form .topic-box .topic-con .topic-list-filter .check-form .filter-title{
+    font-size:0.75rem;
+    font-weight:700;
+    color:#44474b;
+    letter-spacing: -0.2px;
+}
 
+#cooperationPop .topic-tbl-form{
+    width:100%;
+    margin-top:1.625rem;
+}
 
+#cooperationPop .topic-tbl-form .topic-tbl-box{
+    width:100%;
+    overflow: auto;
+}
 
+#cooperationPop .topic-tbl-form .topic-tbl-box .topic-tbl{
+    width:100%;
+    min-width:29.375rem;
+}
 
+#cooperationPop .topic-tbl-form .topic-tbl-box .topic-tbl thead tr th{
+    font-size:0.875rem;
+    font-weight:700;
+    color:#333d4b;
+    letter-spacing: -0.2px;
+    text-align: center;
+    padding-bottom:0.625rem;
+    border-bottom:0.0625rem solid #b0b8c1;
+}
 
+#cooperationPop .topic-tbl-form .topic-tbl-box .topic-tbl thead tr th:first-child{
+    text-align: left;
+}
 
+#cooperationPop .topic-tbl-form .topic-tbl-box .topic-tbl tbody tr td{
+    padding:1.25rem 0.3125rem;
+    border-bottom:0.0625rem solid #e5e8eb;
+    text-align: center;
+    font-size:0.8125rem;
+    font-weight:500;
+    color:#656a71;
+    letter-spacing: -0.2px;
+}
 
+#cooperationPop .topic-tbl-form .topic-tbl-box .topic-tbl tbody tr td:nth-child(4){
+    font-weight: 700;
+    color:#121519;
+}
 
+#cooperationPop .topic-tbl-form .topic-tbl-box .topic-tbl tbody tr td:last-child{
+    padding:1.25rem 0;
+}
 
+#cooperationPop .topic-tbl-form .topic-tbl-box .topic-tbl tbody tr td a{
+    text-align: left;
+    display: block;
+    font-size:0.8125rem;
+    font-weight:500;
+    color:#121519;
+    letter-spacing: -0.2px;
+    line-height:1.4;
+}
+
+#cooperationPop .topic-tbl-form .topic-tbl-box .topic-tbl tbody tr td a:hover{
+    text-decoration: underline;
+}
+
+#cooperationPop .topic-tbl-form .topic-tbl-box .topic-tbl tbody tr td .bage-box{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:0.25rem;
+}
+
+#cooperationPop .topic-tbl-form .topic-tbl-box .topic-tbl tbody tr td .bage-box .bage{
+    font-size:0.6875rem;
+    font-weight:700;
+    letter-spacing: -0.2px;
+    padding:0.3125rem 0.375rem;
+    border-radius: 0.3125rem;
+}
+
+#cooperationPop .topic-tbl-form .tbl-count{
+    font-size: 0.8125rem;
+    font-weight:400;
+    letter-spacing: -0.2px;
+    color:#44474b;
+    margin-top:1.25rem;
+    width:100%;
+    text-align: center;
+}
+
+#cooperationPop .topic-tbl-form .tbl-count span{
+    font-size: 0.8125rem;
+    font-weight:700;
+    letter-spacing: -0.2px;
+    color:#44474b;
+}
 
 
 /* filter 공통 */
@@ -4239,6 +4372,11 @@
 .bage-box .bage.red-bage{
     background:#feeded;
     color:#f21414;
+}
+
+.bage-box .bage.orange-bage{
+    background:#fef2ec;
+    color:#f05a08;
 }
 
 .bage-box .bage.green-line{

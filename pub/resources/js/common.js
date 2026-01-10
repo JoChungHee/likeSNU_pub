@@ -130,8 +130,13 @@ function reportLnbSet(){
     var offsetTop = 60;
     var offsetBottom = 60;
 
-    var menuActiveText = $(".lnb-menu.active").text();
-    $(".lnb-active-title").text(menuActiveText);
+    var menuActiveText = "";
+
+
+    setTimeout(function () {
+        var menuActiveText = $(".lnb-menu.active:first, .lnb-title.active a").text().trim();
+        $(".lnb-active-title").text(menuActiveText);
+    }, 1);
 
     /* =====================
        메뉴 클릭
@@ -194,11 +199,12 @@ function reportLnbSet(){
        active 클래스 처리
     ===================== */
     function setActiveMenu(target) {
-        var menuActiveText = $(".lnb-menu.active").text();
-
+        var menuActiveText = $(".lnb-menu.active:first, .lnb-title.active a:first").text();
+        
         $(".lnb-menu").removeClass("active");
         $('.lnb-menu[data-target="' + target + '"]').addClass("active");
 
+        
         $(".lnb-active-title").text(menuActiveText);
     }
 

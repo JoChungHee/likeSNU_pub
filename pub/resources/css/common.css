@@ -585,6 +585,10 @@ footer .copylight::before{
     overflow-y: auto;
 }
 
+/* 기능 공통 class */
+.pointer{
+    cursor: pointer;
+}
 
 
 

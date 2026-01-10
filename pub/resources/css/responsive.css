@@ -60,12 +60,29 @@
         width:100%;
     }
 
+    /* 리포트 */
     .report-form .report-box .report-con .report-flex .report-flex-box{
         width:100% !important;
     }
 
     .report-form .report-box .report-con .report-index .report-index-list .report-index-con{
         width:calc(50% - 0.4375rem);
+    }
+
+    .join-report-form .join-report-box .join-report-con{
+        width:100%;
+    }
+
+    .join-report-con .report-cont .join-index .join-index-con{
+        width:calc(20% - 0.65rem);
+    }
+
+    #cooperationPop .cooperation-form .cooperation-left{
+        width:100%;
+    }
+
+    #cooperationPop .cooperation-form .cooperation-right{
+        width:100%;
     }
 }
 
@@ -91,6 +108,45 @@
 
     .view-con-scection .over-head .over-box .over-con + .over-con::before{
         display: none;
+    }
+
+    /* 리포트 */
+    .view-tab-box .view-tab-con .join-form .join-box{
+        width:100%;
+    }
+
+    #cooperationPop .topic-form .topic-list-form{
+        width:100%;
+    }
+
+    #cooperationPop .topic-form .topic-list-form .topic-list-box{
+        display:flex;
+        flex-wrap: wrap;
+        gap:1rem;
+    }
+
+    #cooperationPop .topic-form .topic-list-form .topic-list-box .topic-list-con{
+        width:calc(33.33% - 0.6666rem);
+        border:0.0625rem solid #e5e8eb;
+        border-radius: 0.625rem;
+    }
+
+    #cooperationPop .topic-form .topic-list-form .topic-list-box .topic-list-con + .topic-list-con .topic-list{
+        border:0;
+    }
+
+    #cooperationPop .topic-form .topic-list-form .topic-list-box .topic-list-con.active::before{
+        display:none;
+    }
+
+    #cooperationPop .topic-form .topic-list-form .topic-list-box .topic-list-con.active{
+        border-right:0.0625rem solid #e5e8eb;
+        border-radius: 0.625rem;
+    }
+
+    #cooperationPop .topic-form .topic-box{
+        width:100%;
+        margin-top:1.25rem;
     }
 }
 
@@ -259,6 +315,18 @@
         width:100%;
     }
 
+    .researcher-list-form .researcher-list-box .researcher-list-con{
+        width:100%;
+    }
+
+    .join-report-con .report-cont .join-index .join-index-con{
+        width:calc(33.33% - 0.541666rem)
+    }
+
+    #cooperationPop .topic-form .topic-box .topic-con .topic-list-filter .check-form{
+        width:100%;
+    }
+
 }
 
 @media screen and (max-width:520px) {
@@ -299,6 +367,11 @@
     /* 상세화면 */
     .view-con-scection .over-head .over-box .over-con{
         width:100%;
+    }
+
+    .join-report-con .report-cont .join-index .join-index-con{
+        width:100%;
+        height:8.75rem;
     }
 }
 

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LikeSNU 연구 트렌드</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/responsive.css" />
+
+    <!-- JS -->
+    <script src="../resources/js/jquery-3.7.1.js"></script>
+    <script src="../resources/js/common.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            reportLnbSet();
+            filterBtnSet();
+            initReportTabs();
+            filterTabSet();
+            
+        });
+
+    </script>
+</head>
+<body>
+    <!-- S:Header -->
+    <header>
+        <!-- S: Header Top-->
+        <div class="header-top">
+            <div class="header-logo">
+                <a href="" class="logo-btn">
+                    <img alt="서울대학교 빅데이터 지식정보플랫폼 로고" src="../resources/images/common/header_logo.png"/>
+                </a>
+            </div>
+            <div class="top-menu">
+                <a href="" class="top-link">LikeSNU 소개</a>
+                <ul class="ico-list">
+                    <li class="ico-con">
+                        <a href="" class="ico-btn">
+                            <img alt="" src="../resources/images/common/top_ico01.png"/>
+                        </a>
+                    </li>
+                    <li class="ico-con">
+                        <a href="" class="ico-btn">
+                            <img alt="" src="../resources/images/common/top_ico02.png"/>
+                        </a>
+                    </li>
+                    <li class="ico-con">
+                        <a href="" class="ico-btn">
+                            <img alt="" src="../resources/images/common/top_ico03.png"/>
+                        </a>
+                    </li>
+                    <li class="ico-con">
+                        <a href="" class="ico-btn">
+                            <img alt="" src="../resources/images/common/top_ico04.png"/>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- E: Header Top-->
+
+        <!-- S: Page Header -->
+        <div class="page-header">
+            <div class="page-header-box">
+                <div class="page-nav">
+                    <ul class="nav-box">
+                        <li>홈</li>
+                        <li>LikeSNU 분석리포트</li>
+                    </ul>
+                </div>
+                <div class="page-btn">
+                    <div class="btn-box">
+                        <button type="button" class="down-btn">PDF 다운로드</button>
+                    </div>
+                    <ul class="btn-list">
+                        <li class="btn-con">
+                            <a href="" class="edit-btn" ></a>
+                        </li>
+                        <li class="btn-con">
+                            <a href="" class="file-btn" ></a>
+                        </li>
+                        <li class="btn-con">
+                            <a href="" class="share-btn" ></a>
+                        </li>
+                        <li class="btn-con">
+                            <a href="" class="chart-btn" ></a>
+                        </li>
+                        <li class="btn-con">
+                            <a href="" class="columns-btn" ></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="page-title">
+                    LikeSNU 분석리포트
+                    <!-- S: report select -->
+                    <div class="header-select">
+                        <div class="title">
+                            COLLEGE :
+                        </div>
+                        <div class="select-form box-type">
+                            <div class="select-box">
+                                <div class="choice-box">전체</div>
+                                <ul class="select-list">
+                                    <li class="option active">전체</li>
+                                    <li class="option">ㅇㅇ대학</li>
+                                    <li class="option">ㅁㅁ대학</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- E: report select -->
+                </div>
+            </div>
+        </div>
+        <!-- E: Page Header -->
+    </header>
+    <!-- E:Header -->
+
+    <!-- S:Contents -->
+    <div class="container report">
+        <!-- S: lnb -->
+        <div class="lnb-form">
+            <!-- MO -->
+            <div class="lnb-mo">
+                <div class="lnb-active-title"></div>
+            </div>
+
+            <div class="lnb-box">
+                <div class="lnb-con">
+                    <div class="lnb-title">
+                        <a href="report_research.html">연구</a>
+                    </div>
+                    <ul class="lnb-list">
+                        <li class="lnb-items">
+                            <a href="report_research.html#current" class="lnb-menu" data-target="current" data-page="report_research.html">연구현황</a>
+                        </li>
+                        <li class="lnb-items">
+                            <a href="report_research.html#analysis" class="lnb-menu" data-target="analysis" data-page="report_research.html">연구주제분석</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lnb-con">
+                    <div class="lnb-title">
+                        <a href="report_join.html">공동연구</a>
+                    </div>
+                    <ul class="lnb-list">
+                        <li class="lnb-items">
+                            <a href="report_join.html#joinCurrent" class="lnb-menu" data-target="joinCurrent" data-page="report_join.html">공동연구 현황</a>
+                        </li>
+                        <li class="lnb-items">
+                            <a href="report_join.html#joinAnalysis" class="lnb-menu" data-target="joinAnalysis" data-page="report_join.html">교내/국내/국제 분석</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lnb-con">
+                    <div class="lnb-title active">
+                        <a href="report_journal.html">인용저널 분석</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- S: lnb -->
+
+        <!-- S: 연구현황 -->
+        <section class="report-section" >
+            <div class="section-con">
+                <div class="report-form">
+                    <!-- S: 페이지 타이틀 -->
+                    <div class="report-head">
+                        <div class="report-title">
+                            <div class="title">경영대학</div>
+                            <div class="tooltip-form">
+                                <div class="tooltip-title">
+                                    <div class="tooltip-ico">?</div>
+                                    <div class="txt">데이터 분석 범위</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="college-select-form">
+                            <div class="title">
+                                타대학 선택
+                            </div>
+                            <div class="college-select-box">
+                                <div class="select-form">
+                                    <div class="select-box">
+                                        <div class="choice-box">논문수 높임 순</div>
+                                        <ul class="select-list">
+                                            <li class="option ">선택</li>
+                                            <li class="option active">논문수 높임 순</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <button type="button" class="compare-btn" >비교분석</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- E: 페이지 타이틀 -->
+
+                    <!-- S: 연구현황 컨텐츠  -->
+                    <div class="report-box">
+                        <div class="box-title">
+                            연구현황
+                        </div>
+
+                        
+                    </div>
+                    <!-- E: 연구현황 컨텐츠  -->
+
+                </div>
+            </div>
+        </section>
+        <!-- E: 연구현황 -->
+
+        <!-- S: 연구 주제 분석 -->
+        <section class="report-section blue-section" >
+            <div class="section-con">
+                <div class="report-form">
+                    <!-- S: 연구 주제 분석 컨텐츠  -->
+                    <div class="report-box">
+                        <div class="box-title">
+                            연구 주제 분석
+                        </div>
+
+                        
+                    </div>
+                    <!-- E: 연구 주제 분석 컨텐츠  -->
+                </div>
+            </div>
+        </section>
+        <!-- E: 연구 주제 분석 -->
+    </div>
+    <!-- E:Contents -->
+
+    <!-- S:Footer -->
+    <footer>
+        <div class="footer-form">
+            <div class="footer-info">
+                <ul class="footer-info-list">
+                    <li>08826 서울시 관악구 관악로 1 서울대학교 중앙도서관</li>
+                    <li>대표전화 02-880-8001, 5325</li>
+                    <li>단체명 : 서울대학교 중앙도서관  ·  대표자 : 장덕진  ·  고유번호 : 119-82-08544</li>
+                </ul>
+            </div>
+            <div class="footer-btn">
+                <ul class="btn-list">     
+                    <li>
+                        <a href="">
+                            개인정보 처리방침 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            이메일주소 무단수집 거부
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            이용 약관
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            원격지원
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            찾아오는 길
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            서비스별 연락처
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copylight">
+                2022 Seoul National University Library. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- E:Footer -->
+</body>
+</html>
