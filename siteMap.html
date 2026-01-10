@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LikeSNU 연구 트랜드 사이트맵</title>
+
+    <link rel="stylesheet" type="text/css" href="pub/resources/css/reset.css" />
+
+    <style>
+        .fileMap{
+            width:100%;
+            padding:20px;
+        }
+
+        .fileMapTitle{
+            padding-bottom:15px;
+            border-bottom:2px solid var(--title-color);
+        }
+
+        .fileMapUpdate{
+            width:100%;
+            border:1px solid #ddd;
+            border-radius: 10px;
+            padding:10px;
+        }
+
+        .fileMapUpdate .fileMapUpdateTitle{
+            font-size:18px;
+            font-weight:600;
+            color:#131313;
+        }
+
+        .fileMapUpdate .fileMapUpdateBox{
+            display:flex;
+            flex-direction: column;
+            gap:10px;
+            margin-top:20px;
+        } 
+
+        .fileMapUpdate .fileMapUpdateBox .fileMapUpdateCon{
+            padding-left:10px;
+            box-sizing:border-box;
+            display:flex;
+            flex-direction: column;
+            gap:5px;
+            position:relative;
+        }
+
+        .fileMapUpdate .fileMapUpdateBox .fileMapUpdateCon::before{
+            content:"";
+            display:block;
+            width:3px;
+            height:3px;
+            border-radius: 3px;
+            background:#ddd;
+            position:absolute;
+            top:7px;
+            left:0;
+        }
+
+        .fileMapUpdate .fileMapUpdateBox .fileMapUpdateCon .update-con{
+            font-size:14px;
+            color:#131313;
+            line-height:1.3;
+        }
+
+        .fileMapUpdate .fileMapUpdateBox .fileMapUpdateCon .update-date{
+            font-size:12px;
+            color:#666;
+        }
+
+        
+
+        .fileMapForm{
+            display:flex;
+            flex-direction: column;
+            gap:40px;
+            margin-top:20px;
+        }
+
+        .fileMapSection{
+            width:100%;
+        }
+
+        h1{
+            font-weight: 700;
+            font-size:24px;
+        }
+
+        h2{
+            font-weight:700;
+            font-size:18px;
+        }
+
+        table{
+            width:100%;
+            margin-top:10px;
+            border-top:2px solid #121212;
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        table tr th{
+            background:#f8f8f8;;
+            font-weight:700;
+            font-size:14px;
+            border-bottom:1px solid #ddd;
+            height:40px;
+        }
+
+        table tr td{
+            background:#fff;
+            height:40px;
+            padding:10px;
+            border-bottom:1px solid #ddd;
+            font-size:14px;
+            font-weight:500;
+            text-align: center;
+            word-break: keep-all;
+        }
+
+        table tr td span{
+            font-size:14px;
+            font-weight:500;
+        }
+
+        table tr td a{
+            font-size:14px;
+            color:blue !important;
+        }
+
+         table tr td a:hover{
+            text-decoration: underline;
+         }
+
+        table tr:last-child td{
+            border-bottom:1px solid #131313;
+        }
+
+       
+        .ing{
+            color:#666;
+        }
+
+        .end{
+            color:blue;
+        }
+
+        table tr th:nth-child(1),
+        table tr td:nth-child(1){
+            width:5%;
+        }
+
+        table tr th:nth-child(2),
+        table tr td:nth-child(2){
+            width:15%;
+        }
+
+        table tr th:nth-child(3),
+        table tr td:nth-child(3){
+            width:10%;
+        }
+
+        table tr th:nth-child(4),
+        table tr td:nth-child(4){
+            width:15%;
+        }
+
+        table tr th:nth-child(5),
+        table tr td:nth-child(5){
+            width:10%;
+        }
+
+        table tr th:nth-child(6),
+        table tr td:nth-child(6){
+            width:10%;
+        }
+
+        table tr th:nth-child(7),
+        table tr td:nth-child(7){
+            width:10%;
+        }
+
+        table tr th:nth-child(8),
+        table tr td:nth-child(8){
+            width:10%;
+        }
+
+        table tr th:nth-child(9),
+        table tr td:nth-child(9){
+            width:10%;
+        }
+
+        .comment-list{
+            
+        }
+
+        .comment-list li{
+            font-size:12px;
+        }
+
+        .txt-blue{
+            color:blue !important;
+        }
+
+        .txt-orange{
+            color:orange !important;
+        }
+
+        .txt-green{
+            color:green !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="fileMap">
+        <div class="fileMapTitle">
+             <h1>LikeSNU 연구 트렌드 Site Map</h1>
+        </div>
+
+        <div class="fileMapUpdate">
+            <div class="fileMapUpdateTitle">
+                파일 업데이트 내역
+            </div>
+            <ul class="fileMapUpdateBox">
+                <li class="fileMapUpdateCon">
+                    <div class="update-con txt-blue">기존 업데이트 되었으나 신규 추가수정건이 있는 파일은 업데이트시 최근 업로드 일자에 해당 폰트색상 사용</div>
+                    <div class="update-con txt-green">새롭게 추가된 파일 경우 업로드 일자에 해당 폰트 색상 사용</div>
+                    
+                </li>
+                <li class="fileMapUpdateCon">
+                    <div class="update-con">메인, 검색목록 - 주제, 논문, 저널, 연구자 페이지 완료</div>
+                    <div class="update-date">[2026.01.06]</div>
+                </li>
+                <li class="fileMapUpdateCon">
+                    <div class="update-con">상세 화면 페이지 3종 완료 (Overview, Connected Topics, Al Forecast)</div>
+                    <div class="update-date">[2026.01.08]</div>
+                </li>
+            </ul>
+        </div>
+       
+        <div class="fileMapForm">
+            <!-- 파일 S -->
+            <div class="fileMapSection">
+                <h2>파일</h2>
+                <table>
+                    <tr>
+                        <th>No</th>
+                        <th colspan="2">파일설명</th>
+                        <th>파일명</th>
+                        <th>폴더경로</th>
+                        <th>상태</th>
+                        <th>최초업로드</th>
+                        <th>최근업로드</th>
+                        <th>업로드 내역</th>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td colspan="2">
+                            폰트 설정 css
+                        </td>
+                        <td>
+                            font.css
+                        </td>
+                        <td>/resources/css/</td>
+                        <td>
+                            <span class="end">완료</span>
+                        </td>
+                        <td>
+                            2026.01.06
+                        </td>
+                        <td>
+                            2026.01.06
+                        </td>
+                        <td>
+                            <ul class="comment-list">
+                                <li>- 2026.01.06 최초 업로드</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td colspan="2">
+                            페이지 공통 리셋 css
+                        </td>
+                        <td>
+                            reset.css
+                        </td>
+                        <td>/resources/css/</td>
+                        <td>
+                            <span class="end">완료</span>
+                        </td>
+                        <td>
+                            2026.01.06
+                        </td>
+                        <td>
+                            2026.01.06
+                        </td>
+                        <td>
+                            <ul class="comment-list">
+                                <li>- 2026.01.06 최초 업로드</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>03</td>
+                        <td colspan="2">
+                            페이지 공통 css
+                        </td>
+                        <td>
+                            common.css
+                        </td>
+                        <td>/resources/css/</td>
+                        <td>
+                            <span class="ing">작업중</span>
+                        </td>
+                        <td>
+                            2026.01.06
+                        </td>
+                        <td class="txt-blue">
+                            2026.01.08
+                        </td>
+                        <td>
+                            <ul class="comment-list">
+                                <li>- 2026.01.06 최초 업로드</li>
+                                <li>- 2026.01.08 내용 추가 업로드</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>04</td>
+                        <td colspan="2">
+                            페이지 공통 반응형 css
+                        </td>
+                        <td>
+                            responsive.css
+                        </td>
+                        <td>/resources/css/</td>
+                        <td>
+                            <span class="ing">작업중</span>
+                        </td>
+                        <td>
+                            2026.01.06
+                        </td>
+                        <td class="txt-blue">
+                            2026.01.08
+                        </td>
+                        <td>
+                            <ul class="comment-list">
+                                <li>- 2026.01.06 최초 업로드</li>
+                                <li>- 2026.01.08 내용 추가 업로드</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>05</td>
+                        <td colspan="2">
+                            컨텐츠 css
+                        </td>
+                        <td>
+                            contents.css
+                        </td>
+                        <td>/resources/css/</td>
+                        <td>
+                            <span class="ing">작업중</span>
+                        </td>
+                        <td>
+                            2026.01.06
+                        </td>
+                        <td class="txt-blue">
+                            2026.01.08
+                        </td>
+                        <td>
+                            <ul class="comment-list">
+                                <li>- 2026.01.06 최초 업로드</li>
+                                <li>- 2026.01.08 내용 추가 업로드</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>06</td>
+                        <td colspan="2">
+                            공통 스크립트 파일
+                        </td>
+                        <td>
+                            common.js
+                        </td>
+                        <td>/resources/js/</td>
+                        <td>
+                            <span class="ing">작업중</span>
+                        </td>
+                        <td>
+                            2026.01.06
+                        </td>
+                        <td class="txt-blue">
+                            2026.01.08
+                        </td>
+                        <td>
+                            <ul class="comment-list">
+                                <li>- 2026.01.06 최초 업로드</li>
+                                <li>- 2026.01.08 내용 추가 업로드<br>[작업 부분 : 26.01.08 주석]</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 파일 E -->
+
+            <!-- 메인 S -->
+            <div class="fileMapSection">
+                <h2>메인</h2>
+                <table>
+                    <tr>
+                        <th>No</th>
+                        <th>경로</th>
+                        <th>페이지명</th>
+                        <th>파일명</th>
+                        <th>폴더경로</th>
+                        <th>상태</th>
+                        <th>최초업로드</th>
+                        <th>최근업로드</th>
+                        <th>업로드 내역</th>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>메인</td>
+                        <td>메인</td>
+                        <td>
+                            <a href="pub/main.html" target="_blank">main.html</a>
+                        </td>
+                        <td>/pub/</td>
+                        <td>
+                            <span class="end">완료</span>
+                        </td>
+                        <td>
+                            2026.01.06
+                        </td>
+                        <td class="">
+                            2026.01.06
+                        </td>
+                        <td>
+                            <ul class="comment-list">
+                                <li>- 2026.01.06 최초 업로드</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 메인 E -->
+
+            <!-- 검색 페이지 S -->
+            <div class="fileMapSection">
+                <h2>검색 페이지</h2>
+                <table>
+                    <tr>
+                        <th>No</th>
+                        <th>경로</th>
+                        <th>페이지명</th>
+                        <th>파일명</th>
+                        <th>폴더경로</th>
+                        <th>상태</th>
+                        <th>최초업로드</th>
+                        <th>최근업로드</th>
+                        <th>업로드 내역</th>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>홈 > LikeSNU 연구 트렌드 > 주제 검색목록</td>
+                        <td>주제 검색목록</td>
+                        <td>
+                            <a href="pub/search/search_list_topic.html" target="_blank">search_list_topic.html</a>
+                        </td>
+                        <td>/pub/search/</td>
+                        <td>
+                            <span class="end">완료</span>
+                        </td>
+                        <td>
+                            2026.01.06
+                        </td>
+                        <td class="">
+                            2026.01.06
+                        </td>
+                        <td>
+                            <ul class="comment-list">
+                                <li>- 2026.01.06 최초 업로드</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>홈 > LikeSNU 연구 트렌드 > 논문 검색목록</td>
+                        <td>논문 검색목록</td>
+                        <td>
+                            <a href="pub/search/search_list_thesis.html" target="_blank">search_list_thesis.html</a>
+                        </td>
+                        <td>/pub/search/</td>
+                        <td>
+                            <span class="end">완료</span>
+                        </td>
+                        <td>
+                            2026.01.06
+                        </td>
+                        <td class="">
+                            2026.01.06
+                        </td>
+                        <td>
+                            <ul class="comment-list">
+                                <li>- 2026.01.06 최초 업로드</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>03</td>
+                        <td>홈 > LikeSNU 연구 트렌드 > 저널 검색목록</td>
+                        <td>저널 검색목록</td>
+                        <td>
+                            <a href="pub/search/search_list_journal.html" target="_blank">search_list_journal.html</a>
+                        </td>
+                        <td>/pub/search/</td>
+                        <td>
+                            <span class="end">완료</span>
+                        </td>
+                        <td>
+                            2026.01.06
+                        </td>
+                        <td class="">
+                            2026.01.06
+                        </td>
+                        <td>
+                            <ul class="comment-list">
+                                <li>- 2026.01.06 최초 업로드</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>04</td>
+                        <td>홈 > LikeSNU 연구 트렌드 > 연구자 검색목록</td>
+                        <td>연구자 검색목록</td>
+                        <td>
+                            <a href="pub/search/search_list_researcher.html" target="_blank">search_list_researcher.html</a>
+                        </td>
+                        <td>/pub/search/</td>
+                        <td>
+                            <span class="end">완료</span>
+                        </td>
+                        <td>
+                            2026.01.06
+                        </td>
+                        <td class="">
+                            2026.01.06
+                        </td>
+                        <td>
+                            <ul class="comment-list">
+                                <li>- 2026.01.06 최초 업로드</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 검색 페이지 E -->
+
+            <!-- 상세 화면 S -->
+            <div class="fileMapSection">
+                <h2>상세 화면</h2>
+                <table>
+                    <tr>
+                        <th>No</th>
+                        <th>경로</th>
+                        <th>페이지명</th>
+                        <th>파일명</th>
+                        <th>폴더경로</th>
+                        <th>상태</th>
+                        <th>최초업로드</th>
+                        <th>최근업로드</th>
+                        <th>업로드 내역</th>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>홈 > LikeSNU 연구 트렌드 > 주제 검색목록</td>
+                        <td>상세화면 - Overview</td>
+                        <td>
+                            <a href="pub/view/overview.html" target="_blank">overview.html</a>
+                        </td>
+                        <td>/pub/view/</td>
+                        <td>
+                            <span class="end">완료</span>
+                        </td>
+                        <td>
+                            2026.01.08
+                        </td>
+                        <td class="txt-green">
+                            2026.01.08
+                        </td>
+                        <td>
+                            <ul class="comment-list">
+                                <li>- 2026.01.08 최초 업로드</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>홈 > LikeSNU 연구 트렌드 > 논문 검색목록</td>
+                        <td>상세화면 - Connected Topics</td>
+                        <td>
+                            <a href="pub/view/connected_topics.html" target="_blank">connected_topics.html</a>
+                        </td>
+                        <td>/pub/view/</td>
+                        <td>
+                            <span class="end">완료</span>
+                        </td>
+                        <td>
+                            2026.01.08
+                        </td>
+                        <td class="txt-green">
+                            2026.01.08
+                        </td>
+                        <td>
+                            <ul class="comment-list">
+                                <li>- 2026.01.08 최초 업로드</li>
+                            </ul>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>03</td>
+                        <td>홈 > LikeSNU 연구 트렌드 > 저널 검색목록</td>
+                        <td>상세화면 - Ai Forecast</td>
+                        <td>
+                            <a href="pub/view/aI_forecast.html" target="_blank">aI_forecast.html</a>
+                        </td>
+                        <td>/pub/view/</td>
+                        <td>
+                            <span class="end">완료</span>
+                        </td>
+                        <td>
+                            2026.01.08
+                        </td>
+                        <td class="txt-green">
+                            2026.01.08
+                        </td>
+                        <td>
+                            <ul class="comment-list">
+                                <li>- 2026.01.08 최초 업로드</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!-- 상세 화면 -->
+
+        </div>
+    </div>
+</body>
+</html>

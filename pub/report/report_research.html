@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="UTF-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LikeSNU 연구 트렌드</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/responsive.css" />
+
+    <!-- JS -->
+    <script src="../resources/js/jquery-3.7.1.js"></script>
+    <script src="../resources/js/common.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            reportLnbSet();
+            filterBtnSet();
+            initReportTabs();
+            filterTabSet();
+        });
+
+        //5개년 핵심 지표 팝업 오픈
+        function thesisPopOpen(){
+            $("#thesisPop").fadeIn();
+            popOpenScroll();
+        }
+    </script>
+</head>
+<body>
+    <!-- S:Header -->
+    <header>
+        <!-- S: Header Top-->
+        <div class="header-top">
+            <div class="header-logo">
+                <a href="" class="logo-btn">
+                    <img alt="서울대학교 빅데이터 지식정보플랫폼 로고" src="../resources/images/common/header_logo.png"/>
+                </a>
+            </div>
+            <div class="top-menu">
+                <a href="" class="top-link">LikeSNU 소개</a>
+                <ul class="ico-list">
+                    <li class="ico-con">
+                        <a href="" class="ico-btn">
+                            <img alt="" src="../resources/images/common/top_ico01.png"/>
+                        </a>
+                    </li>
+                    <li class="ico-con">
+                        <a href="" class="ico-btn">
+                            <img alt="" src="../resources/images/common/top_ico02.png"/>
+                        </a>
+                    </li>
+                    <li class="ico-con">
+                        <a href="" class="ico-btn">
+                            <img alt="" src="../resources/images/common/top_ico03.png"/>
+                        </a>
+                    </li>
+                    <li class="ico-con">
+                        <a href="" class="ico-btn">
+                            <img alt="" src="../resources/images/common/top_ico04.png"/>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- E: Header Top-->
+
+        <!-- S: Page Header -->
+        <div class="page-header">
+            <div class="page-header-box">
+                <div class="page-nav">
+                    <ul class="nav-box">
+                        <li>홈</li>
+                        <li>LikeSNU 분석리포트</li>
+                    </ul>
+                </div>
+                <div class="page-btn">
+                    <div class="btn-box">
+                        <button type="button" class="down-btn">PDF 다운로드</button>
+                    </div>
+                    <ul class="btn-list">
+                        <li class="btn-con">
+                            <a href="" class="edit-btn" ></a>
+                        </li>
+                        <li class="btn-con">
+                            <a href="" class="file-btn" ></a>
+                        </li>
+                        <li class="btn-con">
+                            <a href="" class="share-btn" ></a>
+                        </li>
+                        <li class="btn-con">
+                            <a href="" class="chart-btn" ></a>
+                        </li>
+                        <li class="btn-con">
+                            <a href="" class="columns-btn" ></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="page-title">
+                    LikeSNU 분석리포트
+                    <!-- S: report select -->
+                    <div class="header-select">
+                        <div class="title">
+                            COLLEGE :
+                        </div>
+                        <div class="select-form box-type">
+                            <div class="select-box">
+                                <div class="choice-box">전체</div>
+                                <ul class="select-list">
+                                    <li class="option active">전체</li>
+                                    <li class="option">ㅇㅇ대학</li>
+                                    <li class="option">ㅁㅁ대학</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- E: report select -->
+                </div>
+            </div>
+        </div>
+        <!-- E: Page Header -->
+    </header>
+    <!-- E:Header -->
+
+    <!-- S:Contents -->
+    <div class="container report">
+        <!-- S: lnb -->
+        <div class="lnb-form">
+            <!-- MO -->
+            <div class="lnb-mo">
+                <div class="lnb-active-title"></div>
+            </div>
+
+            <div class="lnb-box">
+                <div class="lnb-con">
+                    <div class="lnb-title">
+                        <a href="report_research.html">연구</a>
+                    </div>
+                    <ul class="lnb-list">
+                        <li class="lnb-items">
+                            <a href="report_research.html#current" class="lnb-menu active" data-target="current" data-page="report_research.html">연구현황</a>
+                        </li>
+                        <li class="lnb-items">
+                            <a href="report_research.html#analysis" class="lnb-menu" data-target="analysis" data-page="report_research.html">연구주제분석</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lnb-con">
+                    <div class="lnb-title">
+                        <a href="report_join.html">공동연구</a>
+                    </div>
+                    <ul class="lnb-list">
+                        <li class="lnb-items">
+                            <a href="report_join.html#joinCurrent" class="lnb-menu" data-target="joinCurrent" data-page="report_join.html">공동연구 현황</a>
+                        </li>
+                        <li class="lnb-items">
+                            <a href="report_join.html#joinAnalysis" class="lnb-menu" data-target="joinAnalysis" data-page="report_join.html">교내/국내/국제 분석</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lnb-con">
+                    <div class="lnb-title">
+                        <a href="report_journal.html">인용저널 분석</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- S: lnb -->
+
+        <!-- S: 연구현황 -->
+        <section class="report-section" data-section="current" >
+            <div class="section-con">
+                <div class="report-form">
+                    <!-- S: 페이지 타이틀 -->
+                    <div class="report-head">
+                        <div class="report-title">
+                            <div class="title">경영대학</div>
+                            <div class="tooltip-form">
+                                <div class="tooltip-title">
+                                    <div class="tooltip-ico">?</div>
+                                    <div class="txt">데이터 분석 범위</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- E: 페이지 타이틀 -->
+
+                    <!-- S: 연구현황 컨텐츠  -->
+                    <div class="report-box">
+                        <div class="box-title">
+                            연구현황
+                        </div>
+
+                        <!-- S: 연구성과 종합 분석  -->
+                        <div class="report-con">
+                            <div class="title-box">
+                                <div class="con-title">
+                                    <div class="ai-ico">
+                                        AI
+                                    </div>
+                                    <div class="title">
+                                        연구성과 종합 분석
+                                    </div>
+                                    <div class="sub">
+                                        단과대학별 연구 현황 및 최종 요약 분석 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="report-ai-box">
+                                <div class="ai-title">경영대학 5년 성과 분석 (2020-2024)</div>
+                                <div class="ai-comment">
+                                    <div class="title">요약 : </div>
+                                    <div class="txt">
+                                        경영대학 분야는 2024년 들어 성과가 다소 주춤한 모습을 보이고 있으나, 과거 높은 성과를 유지했던 분야이므로 향후 회복세가 기대됨. 전반적으로 꾸준한 연구 활동이 필요함.
+                                    </div>
+                                </div>
+                                <div class="report-ai-con">
+                                    <ul class="report-ai-list">
+                                        <li class="report-ai">
+                                            <div class="title">
+                                                핵심 지표
+                                            </div>
+                                            <div class="summary">
+                                                <p>논문 수: 5년 520건, 31% 감소 (119→82건)</p>
+                                                <p>등재: WOS 유지(52→53건), KCI 급감(53→24건, -55%)</p>
+                                                <p>협력: 총 44% (국제 25%, 국내 15%, 교내 5%)</p>
+                                                <p>피인용: 5,674회, 경제·금융 1,130회 (SNU 대비 2.1배)</p>
+                                            </div>
+                                        </li>
+                                        <li class="report-ai">
+                                            <div class="title">
+                                                5년 변화 분석
+                                            </div>
+                                            <div class="summary">
+                                                <p>논문 생산: 지속 감소, 2024년 최저(82건)</p>
+                                                <p>등재 전환: KCI -55%, WOS 유지 → 국제 중심 재편</p>
+                                                <p>협력 추세: 국제 증가(26→31건), 국내 급감(15→7건, -72%)</p>
+                                                <p>주제 변화: 경제·금융 -54%, 컴퓨터 비중 증가(6.7%→9.7%)</p>
+                                            </div>
+                                        </li>
+                                        <li class="report-ai">
+                                            <div class="title">
+                                                연구자 생태계 분석
+                                            </div>
+                                            <div class="summary">
+                                                <p>1인당 생산: 5.9건/5년 (연평균 1.2건)</p>
+                                                <p>-협력 비중: 전체의 44%가 협력 연구 (230건/520건)</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- E: 연구성과 종합 분석  -->
+
+                        <!-- S: 5개년 핵심 지표  -->
+                        <div class="report-con">
+                            <div class="title-box">
+                                <div class="con-title">
+                                    <div class="title">
+                                        5개년 핵심 지표
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="report-index">
+                                <ul class="report-index-list">
+                                    <li class="report-index-con">
+                                        <i>
+                                            <img src="../resources/images/contents/report_con_ico01.png"/>
+                                        </i>
+                                        <div class="report-index-item">
+                                            <div class="count-box">
+                                                <div class="title">논문</div>
+                                                <div class="count">
+                                                    <span>1345</span> 건
+                                                </div>
+                                            </div>
+
+                                             <button type="button" onclick="thesisPopOpen();" class="index-btn">
+                                                클릭하여 목록 보기
+                                            </button>
+                                        </div>
+                                    </li>
+
+                                    <li class="report-index-con">
+                                        <i>
+                                            <img src="../resources/images/contents/report_con_ico02.png"/>
+                                        </i>
+                                        <div class="report-index-item">
+                                            <div class="count-box">
+                                                <div class="title">SCIE</div>
+                                                <div class="count">
+                                                    <span>44</span> 건
+                                                </div>
+                                            </div>
+
+                                             <button type="button" onclick="thesisPopOpen();" class="index-btn">
+                                                클릭하여 목록 보기
+                                            </button>
+                                        </div>
+                                    </li>
+
+                                    <li class="report-index-con">
+                                        <i>
+                                            <img src="../resources/images/contents/report_con_ico03.png"/>
+                                        </i>
+                                        <div class="report-index-item">
+                                            <div class="count-box">
+                                                <div class="title">SCOPLU</div>
+                                                <div class="count">
+                                                    <span>80</span> 건
+                                                </div>
+                                            </div>
+
+                                             <button type="button" onclick="thesisPopOpen();" class="index-btn">
+                                                클릭하여 목록 보기
+                                            </button>
+                                        </div>
+                                    </li>
+
+                                    <li class="report-index-con">
+                                        <i>
+                                            <img src="../resources/images/contents/report_con_ico04.png"/>
+                                        </i>
+                                        <div class="report-index-item">
+                                            <div class="count-box">
+                                                <div class="title">KCI</div>
+                                                <div class="count">
+                                                    <span>19</span> 건
+                                                </div>
+                                            </div>
+
+                                             <button type="button" onclick="thesisPopOpen();" class="index-btn">
+                                                클릭하여 목록 보기
+                                            </button>
+                                        </div>
+                                    </li>
+
+                                    <li class="report-index-con">
+                                        <i>
+                                            <img src="../resources/images/contents/report_con_ico05.png"/>
+                                        </i>
+                                        <div class="report-index-item">
+                                            <div class="count-box">
+                                                <div class="title">연구자</div>
+                                                <div class="count">
+                                                    <span>19</span> 명
+                                                </div>
+                                            </div>
+
+                                             <button type="button" onclick="thesisPopOpen();" class="index-btn">
+                                                클릭하여 목록 보기
+                                            </button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <!-- E: 5개년 핵심 지표  -->
+
+                        <!-- S: 연도별 논문 발표수  -->
+                        <div class="report-con">
+                            <div class="report-flex">
+                                <!-- S: 연도별 논문 발표수 -->
+                                <div class="report-flex-box chart-type">
+                                    <div class="title-box">
+                                        <div class="con-title">
+                                            <div class="title">
+                                                연도별 논문 발표수
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="chart-box">
+                                        <!-- 차트 영역 - 퍼블은 이미지 대체 -->
+                                        <img src="../resources/images/sample/sample_graph04.png"/>
+                                    </div>
+                                </div>
+                                <!-- E: 연도별 논문 발표수 -->
+
+                                <!-- S: 등재 현황 -->
+                                <div class="report-flex-box chart-type">
+                                    <div class="title-box">
+                                        <div class="con-title">
+                                            <div class="title">
+                                                등재 현황
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="filter-box">
+                                        <ul class="filter-list">
+                                            <li class="filter-con">
+                                                <button type="button" class="filter-btn active" >
+                                                    전체
+                                                </button>
+                                            </li>
+                                            <li class="filter-con">
+                                                <button type="button" class="filter-btn" >
+                                                    KCI
+                                                </button>
+                                            </li>
+                                            <li class="filter-con">
+                                                <button type="button" class="filter-btn" >
+                                                    SCOPUS
+                                                </button>
+                                            </li>
+                                            <li class="filter-con">
+                                                <button type="button" class="filter-btn" >
+                                                    WOS
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="chart-box">
+                                        <!-- 차트 영역 - 퍼블은 이미지 대체 -->
+                                        <img src="../resources/images/sample/sample_graph05.png"/>
+                                    </div>
+                                </div>
+                                <!-- E: 등재 현황 -->
+
+                                <!-- S: 유망 논문 -->
+                                <div class="report-flex-box tbl-type">
+                                    <div class="title-box">
+                                        <div class="con-title">
+                                            <div class="title">
+                                                유망 논문
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <ul class="thesis-list-box">
+                                        <li class="thesis-list-con">
+                                            <div class="title">HCP 근접</div>
+                                            <div class="count">00건</div>
+                                        </li>
+                                        <li class="thesis-list-con">
+                                            <div class="title">HCP</div>
+                                            <div class="count">00건</div>
+                                        </li>
+                                        <li class="thesis-list-con">
+                                            <div class="title">HP</div>
+                                            <div class="count">00건</div>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <!-- E: 유망 논문 -->
+                            </div>
+                            
+                            
+                        </div>
+                        <!-- E: 연도별 논문 발표수  -->
+                    </div>
+                    <!-- E: 연구현황 컨텐츠  -->
+
+                </div>
+            </div>
+        </section>
+        <!-- E: 연구현황 -->
+
+        <!-- S: 연구 주제 분석 -->
+        <section class="report-section blue-section" data-section="analysis" >
+            <div class="section-con">
+                <div class="report-form">
+                    <!-- S: 연구 주제 분석 컨텐츠  -->
+                    <div class="report-box">
+                        <div class="box-title">
+                            연구 주제 분석
+                        </div>
+
+                        <!-- S: 강점 분석  -->
+                        <div class="report-con">
+                            <div class="title-box">
+                                <div class="con-title">
+                                    <div class="ai-ico">
+                                        AI
+                                    </div>
+                                    <div class="title">
+                                        강점 분석
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="report-ai-box">
+                                <div class="ai-title"><span>무엇이 뜨고 있고, 우리의 강점</span>은 어디인가?</div>
+                                <div class="ai-comment">
+                                    <div class="title">요약 : </div>
+                                    <div class="txt">
+                                        경영대학은 2024년에도 높은 관심과 연구활동을 유지하며, 특히 사회과학 분야에서 두각을 나타냅니다.<br>
+                                        지속적인 연구를 통하여 미래 지향적인 분야를 개척하고 있으며, 사회 변화에 대한 깊이 있는 분석을 제공하는 강점을 지닙니다.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- E: 강점 분석  -->
+
+                        <!-- S: 경영대학에서 논문 출판이 많은 주제  -->
+                        <div class="report-con">
+                            <div class="report-flex">
+                                <!-- S: 경영대학에서 논문 출판이 많은 주제 -->
+                                <div class="report-flex-box flex-2n">
+                                    <div class="title-box">
+                                        <div class="con-title">
+                                            <div class="title">
+                                                경영대학에서 논문 출판이 많은 주제
+                                            </div>
+                                        </div>
+                                        <div class="title-year">
+                                            기준 : 2021 - 2024
+                                        </div>
+                                    </div>
+                                    <div class="report-filter-form">
+                                        <div class="filter-form">
+                                            <div class="filter-box">
+                                                <ul class="filter-list">
+                                                    <li class="filter-con">
+                                                        <button type="button" class="filter-btn active" >
+                                                            SNU
+                                                        </button>
+                                                    </li>
+                                                    <li class="filter-con">
+                                                        <button type="button" class="filter-btn" >
+                                                            국내
+                                                        </button>
+                                                    </li>
+                                                    <li class="filter-con">
+                                                        <button type="button" class="filter-btn" >
+                                                            국제
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="filter-right">
+                                                <button type="button" class="excel-btn">
+                                                    <img src="../resources/images/contents/excel_ico.png"/>
+                                                </button>
+                                                <ul class="filter-tab">
+                                                    <li class="filter-tab-con graph-type " data-value="graph" >
+                                                        <i></i>
+                                                    </li>
+                                                    <li class="filter-tab-con columns-type active" data-value="columns">
+                                                        <i></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="report-tab-box">
+                                            <!-- S: 그래프 -->
+                                            <div class="report-tab-con" data-box="graph" >
+                                                <div class="chart-box">
+                                                    <!-- 차트 영역 - 퍼블은 이미지 대체 -->
+                                                    <img src="../resources/images/sample/sample_graph09.png"/>
+                                                </div>
+                                            </div>
+                                            <!-- E: 그래프 -->
+
+                                            <!-- S: 컬럼 -->
+                                            <div class="report-tab-con" data-box="columns" >
+                                                <div class="columns-tbl-form">
+                                                    <div class="columns-tbl">
+                                                        <div class="columns-tbl-head">
+                                                            <ul class="columns-head">
+                                                                <li class="columns-th">#</li>
+                                                                <li class="columns-th">주제</li>
+                                                                <li class="columns-th">논문수</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="columns-tbl-body">
+                                                            <!-- S: loop -->
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">1</li>
+                                                                <li class="columns-td">내과</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+                                                            <!-- E: loop -->
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">2</li>
+                                                                <li class="columns-td">유방암</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">3</li>
+                                                                <li class="columns-td">코로나19</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">4</li>
+                                                                <li class="columns-td">딥러닝</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">5</li>
+                                                                <li class="columns-td">인공지능</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">6</li>
+                                                                <li class="columns-td">전기촉매</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <!-- E: 컬럼 -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- S: 경영대학에서 논문 출판이 많은 주제 -->
+
+                                <!-- S: 경영대학에서 피인용이 많은 주제 -->
+                                <div class="report-flex-box flex-2n">
+                                    <div class="title-box">
+                                        <div class="con-title">
+                                            <div class="title">
+                                                경영대학에서 피인용이 많은 주제
+                                            </div>
+                                        </div>
+                                        <div class="title-year">
+                                            기준 : 2021 - 2024
+                                        </div>
+                                    </div>
+
+                                    <div class="report-filter-form">
+                                        <div class="filter-form">
+                                            <div class="filter-box">
+                                                <ul class="filter-list">
+                                                    <li class="filter-con">
+                                                        <button type="button" class="filter-btn active" >
+                                                            SNU
+                                                        </button>
+                                                    </li>
+                                                    <li class="filter-con">
+                                                        <button type="button" class="filter-btn" >
+                                                            국내
+                                                        </button>
+                                                    </li>
+                                                    <li class="filter-con">
+                                                        <button type="button" class="filter-btn" >
+                                                            국제
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="filter-right">
+                                                <button type="button" class="excel-btn">
+                                                    <img src="../resources/images/contents/excel_ico.png"/>
+                                                </button>
+                                                <ul class="filter-tab">
+                                                    <li class="filter-tab-con graph-type active" data-value="graph" >
+                                                        <i></i>
+                                                    </li>
+                                                    <li class="filter-tab-con columns-type " data-value="columns">
+                                                        <i></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="report-tab-box">
+                                            <!-- S: 그래프 -->
+                                            <div class="report-tab-con" data-box="graph" >
+                                                <div class="chart-box">
+                                                    <!-- 차트 영역 - 퍼블은 이미지 대체 -->
+                                                    <img src="../resources/images/sample/sample_graph09.png"/>
+                                                </div>
+                                            </div>
+                                            <!-- E: 그래프 -->
+
+                                            <!-- S: 컬럼 -->
+                                            <div class="report-tab-con" data-box="columns" >
+                                                <div class="columns-tbl-form">
+                                                    <div class="columns-tbl">
+                                                        <div class="columns-tbl-head">
+                                                            <ul class="columns-head">
+                                                                <li class="columns-th">#</li>
+                                                                <li class="columns-th">주제</li>
+                                                                <li class="columns-th">논문수</li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="columns-tbl-body">
+                                                            <!-- S: loop -->
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">1</li>
+                                                                <li class="columns-td">내과</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+                                                            <!-- E: loop -->
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">2</li>
+                                                                <li class="columns-td">유방암</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">3</li>
+                                                                <li class="columns-td">코로나19</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">4</li>
+                                                                <li class="columns-td">딥러닝</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">5</li>
+                                                                <li class="columns-td">인공지능</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                            <ul class="columns-body">
+                                                                <li class="columns-td">6</li>
+                                                                <li class="columns-td">전기촉매</li>
+                                                                <li class="columns-td">512</li>
+                                                            </ul>
+
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            <!-- E: 컬럼 -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- S: 경영대학에서 피인용이 많은 주제 -->
+                            </div>
+                            
+                        </div>
+                        <!-- E: 경영대학에서 논문 출판이 많은 주제  -->
+                    </div>
+                    <!-- E: 연구 주제 분석 컨텐츠  -->
+                </div>
+            </div>
+        </section>
+        <!-- E: 연구 주제 분석 -->
+    </div>
+    <!-- E:Contents -->
+
+    <!-- S:Footer -->
+    <footer>
+        <div class="footer-form">
+            <div class="footer-info">
+                <ul class="footer-info-list">
+                    <li>08826 서울시 관악구 관악로 1 서울대학교 중앙도서관</li>
+                    <li>대표전화 02-880-8001, 5325</li>
+                    <li>단체명 : 서울대학교 중앙도서관  ·  대표자 : 장덕진  ·  고유번호 : 119-82-08544</li>
+                </ul>
+            </div>
+            <div class="footer-btn">
+                <ul class="btn-list">     
+                    <li>
+                        <a href="">
+                            개인정보 처리방침 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            이메일주소 무단수집 거부
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            이용 약관
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            원격지원
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            찾아오는 길
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            서비스별 연락처
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="copylight">
+                2022 Seoul National University Library. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- E:Footer -->
+
+    <!-- S:팝업  [국내] 연구 인기주제  -->
+    <div class="layer-pop" id="thesisPop">
+        <div class="dim"></div>
+        <div class="layer-form">
+            <div class="layer-box">
+                <div class="layer-head">
+                    <div class="layer-title">
+                        [국내] 연구 인기주제 - 가상 현실
+                    </div>
+                    <button type="button" onclick="layerClose();" class="layer-close-btn" >
+                        <img src="../resources/images/common/layer-close.png"/>
+                    </button>
+                </div>
+                <div class="layer-body">
+                    <div class="thesis-pop-head">
+                        <div class="thesis-title-box">
+                            <div class="thesis-title">논문 목록</div>
+                            <div class="thesis-count">(3건)</div>
+                            <button type="button" class="excel-btn">
+                                <img src="../resources/images/contents/excel_ico.png"/>
+                            </button>
+                        </div>
+
+                        <div class="thesis-select-box">
+                            <div class="select-form">
+                                <div class="select-box">
+                                    <div class="choice-box">선택</div>
+                                    <ul class="select-list">
+                                        <li class="option active">선택</li>
+                                        <li class="option ">최신순</li>
+                                        <li class="option">피인용순</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="thesis-filter">
+                        <div class="check-form">
+                            <ul class="check-box">
+                                <li class="check-con">
+                                    <input type="checkbox" id="checkSample01" />
+                                    <label for="checkSample01">
+                                        <i></i>
+                                        <div class="check-txt">HCP(Highly Cited Paper)</div>
+                                    </label>
+                                </li>
+
+                                <li class="check-con">
+                                    <input type="checkbox" id="checkSample02" />
+                                    <label for="checkSample02">
+                                        <i></i>
+                                        <div class="check-txt">HP(Hot Papers)</div>
+                                    </label>
+                                </li>
+
+                                <li class="check-con">
+                                    <input type="checkbox" id="checkSample03" />
+                                    <label for="checkSample03">
+                                        <i></i>
+                                        <div class="check-txt">Q1</div>
+                                    </label>
+                                </li>
+
+                                <li class="check-con">
+                                    <input type="checkbox" id="checkSample04" disabled />
+                                    <label for="checkSample04">
+                                        <i></i>
+                                        <div class="check-txt">Q2</div>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="thesis-list-board">
+                        <ul class="thesis-list-form">
+                            <!-- S: loop -->
+                            <li class="thesis-list-box">
+                                <a href="" class="thesis-con">
+                                    <div class="title">
+                                        Exploring the potential use of the metaverse in nurse education through a mock trial
+                                    </div>
+                                    <ul class="sub-list">
+                                        <li>Lee H., Yi Y., Moon W., Yeo J.Y . / Nurse Educatjion Today / 2023</li>
+                                    </ul>
+                                    <div class="status">
+                                        <div class="altmetric-con">
+                                            <i>
+                                                <img src="../resources/images/contents/logo_sample01.png"/>
+                                            </i>
+                                            <div class="altmetric-txt">
+                                                5
+                                            </div>
+                                        </div>
+                                        <div class="logo-con">
+                                            <img src="../resources/images/contents/logo_sample02.png"/>
+                                            <div class="txt">
+                                                PlumX Metrics
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- E: loop -->
+
+                            <li class="thesis-list-box">
+                                <a href="" class="thesis-con">
+                                    <div class="title">
+                                        Exploring the potential use of the metaverse in nurse education through a mock trial
+                                    </div>
+                                    <ul class="sub-list">
+                                        <li>Lee H., Yi Y., Moon W., Yeo J.Y . / Nurse Educatjion Today / 2023</li>
+                                    </ul>
+                                    <div class="status">
+                                        <div class="altmetric-con">
+                                            <i>
+                                                <img src="../resources/images/contents/logo_sample01.png"/>
+                                            </i>
+                                            <div class="altmetric-txt">
+                                                5
+                                            </div>
+                                        </div>
+                                        <div class="logo-con">
+                                            <img src="../resources/images/contents/logo_sample02.png"/>
+                                            <div class="txt">
+                                                PlumX Metrics
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="thesis-list-box">
+                                <a href="" class="thesis-con">
+                                    <div class="title">
+                                        Exploring the potential use of the metaverse in nurse education through a mock trial
+                                    </div>
+                                    <ul class="sub-list">
+                                        <li>Lee H., Yi Y., Moon W., Yeo J.Y . / Nurse Educatjion Today / 2023</li>
+                                    </ul>
+                                    <div class="status">
+                                        <div class="altmetric-con">
+                                            <i>
+                                                <img src="../resources/images/contents/logo_sample01.png"/>
+                                            </i>
+                                            <div class="altmetric-txt">
+                                                5
+                                            </div>
+                                        </div>
+                                        <div class="logo-con">
+                                            <img src="../resources/images/contents/logo_sample02.png"/>
+                                            <div class="txt">
+                                                PlumX Metrics
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- S: paging -->
+                        <div class="paging-form">
+                            <ul class="paging-box">
+                                <li class="paging-con">
+                                    <a href="javascript:;" class="page-arrow" >
+                                        <img src="../resources/images/common/paging_first.png"/>
+                                    </a>
+                                </li>
+                                <li class="paging-con">
+                                    <a href="javascript:;" class="page-arrow" >
+                                        <img src="../resources/images/common/paging_prev.png"/>
+                                    </a>
+                                </li>
+                                <!-- S: page nmuber -->
+                                <li class="paging-con ">
+                                    <a href="javascript:;" class="page-number active" >1</a>
+                                </li>
+                                <li class="paging-con ">
+                                    <a href="javascript:;" class="page-number" >2</a>
+                                </li>
+                                <li class="paging-con ">
+                                    <a href="javascript:;" class="page-number" >3</a>
+                                </li>
+                                <li class="paging-con ">
+                                    <a href="javascript:;" class="page-number" >4</a>
+                                </li>
+                                <li class="paging-con ">
+                                    <a href="javascript:;" class="page-number" >5</a>
+                                </li>
+                                <li class="paging-con ">
+                                    <a href="javascript:;" class="page-number" >6</a>
+                                </li>
+                                <li class="paging-con ">
+                                    <a href="javascript:;" class="page-number" >7</a>
+                                </li>
+                                <li class="paging-con ">
+                                    <a href="javascript:;" class="page-number" >8</a>
+                                </li>
+                                <li class="paging-con ">
+                                    <a href="javascript:;" class="page-number" >9</a>
+                                </li>
+                                <li class="paging-con ">
+                                    <a href="javascript:;" class="page-number" >10</a>
+                                </li>
+                                <!-- E: page number -->
+                                <li class="paging-con">
+                                    <a href="javascript:;" class="page-arrow" >
+                                        <img src="../resources/images/common/paging_next.png"/>
+                                    </a>
+                                </li>
+                                <li class="paging-con">
+                                    <a href="javascript:;" class="page-arrow" >
+                                        <img src="../resources/images/common/paging_last.png"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- E: paging -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E:팝업  [국내] 연구 인기주제  -->
+</body>
+</html>

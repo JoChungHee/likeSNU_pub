@@ -1,0 +1,715 @@
+/* header */
+header{
+    width:100%;
+}
+
+header .header-top{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 3.625rem;
+    height:5.1875rem;
+    border-bottom:0.0625rem solid #ececec;
+}
+
+header .header-top .header-logo{
+    width:18rem;
+}
+
+header .header-top .header-logo img{
+    width:100%;
+}
+
+header .header-top .top-menu{
+    display:flex;
+    align-items: center;
+    gap:1.25rem;
+}
+
+header .header-top .top-menu .top-link{
+    font-size:1rem;
+    color:#0078fe;
+    font-weight:700;
+}
+
+header .header-top .top-menu .ico-list{
+    display:flex;
+    align-items: center;
+    gap:0.75rem;
+}
+
+header .header-top .top-menu .ico-list .ico-con a{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:2.125rem;
+    height:2.125rem;
+    border-radius: 0.4375rem;
+    border:0.0625rem solid #d9d9d9;
+}
+
+header .page-header{
+    width:100%;
+    border-bottom:0.0625rem solid #f2f2f2;
+}
+
+header .page-header .page-header-box{
+    width:100%;
+    max-width:92.5rem;
+    padding:2.5rem 1.25rem 2.625rem 1.25rem;
+    margin:0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .page-header .page-header-box .page-nav{
+
+}
+
+header .page-header .page-header-box .page-nav .nav-box{
+    display:flex;
+    align-items: center;
+}
+
+header .page-header .page-header-box .page-nav .nav-box li{
+    font-size:1rem;
+    color:#44474b;
+    font-weight:600;
+    letter-spacing: -0.2px;
+    display: flex;
+    align-items: center;
+}
+
+header .page-header .page-header-box .page-nav .nav-box li + li{
+    font-weight:700;
+}
+
+header .page-header .page-header-box .page-nav .nav-box li + li::before{
+    content:"";
+    display:block;
+    width:0.4375rem;
+    height:0.8125rem;
+    background:url("../images/common/nav_arrow.png") no-repeat center;
+    background-size: contain;
+    margin:0 0.375rem;
+}
+
+header .page-header .page-header-box .page-btn{
+    display:flex;
+    align-items: center;
+    gap:1.25rem;
+}
+
+header .page-header .page-header-box .page-btn .btn-list{
+    display:flex;
+    align-items: center;
+    gap:1.25rem;
+}
+
+header .page-header .page-header-box .page-btn .btn-list .btn-con{
+    
+}
+
+header .page-header .page-header-box .page-btn .btn-list .btn-con a{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:1.125rem;
+    height:1.25rem;
+}
+
+header .page-header .page-header-box .page-btn .btn-list .btn-con a.edit-btn{
+    width:1.25rem;
+    background:url("../images/common/edit_ico.png") no-repeat center;
+    background-size: contain;
+}
+
+header .page-header .page-header-box .page-btn .btn-list .btn-con a.edit-btn:hover{
+    width:1.25rem;
+    background:url("../images/common/edit_ico_h.png") no-repeat center;
+    background-size: contain;
+}
+
+header .page-header .page-header-box .page-btn .btn-list .btn-con a.file-btn{
+    background:url("../images/common/file_ico.png") no-repeat center;
+    background-size: contain;
+}
+
+header .page-header .page-header-box .page-btn .btn-list .btn-con a.file-btn:hover{
+    background:url("../images/common/file_ico_h.png") no-repeat center;
+    background-size: contain;
+}
+
+header .page-header .page-header-box .page-btn .btn-list .btn-con a.share-btn{
+    background:url("../images/common/share_ico.png") no-repeat center;
+    background-size: contain;
+}
+
+header .page-header .page-header-box .page-btn .btn-list .btn-con a.share-btn:hover{
+    background:url("../images/common/share_ico_h.png") no-repeat center;
+    background-size: contain;
+}
+
+header .page-header .page-header-box .page-btn .btn-list .btn-con a.chart-btn{
+    background:url("../images/common/chart_ico.png") no-repeat center;
+    background-size: contain;
+}
+
+header .page-header .page-header-box .page-btn .btn-list .btn-con a.chart-btn:hover{
+    background:url("../images/common/chart_ico_h.png") no-repeat center;
+    background-size: contain;
+}
+
+header .page-header .page-header-box .page-btn .btn-list .btn-con a.columns-btn{
+    background:url("../images/common/columns_ico.png") no-repeat center;
+    background-size: contain;
+}
+
+header .page-header .page-header-box .page-btn .btn-list .btn-con a.columns-btn:hover{
+    background:url("../images/common/columns_ico_h.png") no-repeat center;
+    background-size: contain;
+}
+
+header .page-header .page-header-box .page-btn .btn-box{
+    display:flex;
+    align-items: center;
+}
+
+header .page-header .page-header-box .page-btn .btn-box .down-btn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:0.75rem;
+    font-weight: 600;
+    color:#121519;
+    background:#fbd462;
+    border-radius: 0.3125rem;
+    gap:0.4375rem;
+    padding:0.625rem 0.875rem;
+}
+
+header .page-header .page-header-box .page-btn .btn-box .down-btn::before{
+    content:"";
+    display: block;
+    width:0.875rem;
+    height:0.875rem;
+    background:url("../images/contents/file_down_ico.png") no-repeat center;
+    background-size: contain;
+}
+
+header .page-header .page-header-box .page-btn .btn-box .down-btn:hover{
+    background:#efca5e;
+}
+
+header .page-header .page-header-box .page-title{
+    width:100%;
+    font-size:2rem;
+    font-weight:700;
+    color:#222222;
+    margin-top:1.3125rem;
+    display:flex;
+    align-items: center;
+    gap:1.25rem;
+    flex-wrap: wrap;
+}
+
+header .page-header .page-header-box .page-title .header-select{
+    display:flex;
+    align-items: center;
+    gap:0.5rem;
+}
+
+header .page-header .page-header-box .page-title .header-select .title{
+    font-size:0.875rem;
+    font-weight:600;
+    color:#656a71;
+    letter-spacing: -0.2px;
+}
+
+header .page-header .page-header-box .page-title .header-select .select-form{
+    width:7.5rem;
+}
+
+/* footer */
+footer{
+    width:100%;
+    background:#202020;
+}
+
+footer .footer-form{
+    width:100%;
+    max-width:92.5rem;
+    margin:0 auto;
+    padding:8.25rem 1.25rem 4.625rem 1.25rem;
+}
+
+footer .footer-form .footer-info{
+    width:100%;
+}
+
+footer .footer-form .footer-info .footer-info-list{
+    display:flex;
+    flex-direction: column;
+    gap:0.625rem;
+}
+
+footer .footer-form .footer-info .footer-info-list li{
+    font-size:0.9375rem;
+    color:#999999;
+    font-weight:700;
+}
+
+footer .footer-form .footer-btn{
+    margin-top:1.375rem;
+    width:100%;
+}
+
+footer .footer-form .footer-btn .btn-list{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:1rem 1.625rem;
+}
+
+footer .footer-form .footer-btn .btn-list li a{
+    font-size:0.9375rem;
+    color:#999;
+    font-weight:700;
+}
+
+footer .footer-form .footer-btn .btn-list li a:hover{
+    color:#cfcfcf;
+}
+
+footer .copylight{
+    width:100%;
+    margin-top:2.75rem;
+    display:flex;
+    align-items: center;
+    font-size:0.875rem;
+    font-weight:600;
+    color:#cfcfcf;
+    gap:0.1875rem;
+}
+
+footer .copylight::before{
+    content:"";
+    display: block;
+    width:0.75rem;
+    height:0.75rem;
+    background:url("../images/common/copylight.png") no-repeat center;
+    background-size: contain;
+}
+
+/* 공통 */
+.container{
+    width:100%;
+}
+
+.container section{
+    width:100%;
+}
+
+.container section.blue-section{
+    background:#f9fafb;
+}
+
+.container section .section-con{
+    width:100%;
+    max-width:92.5rem;
+    padding:0rem 1.25rem 0rem 1.25rem;
+    margin:0 auto;
+}
+
+/* paging */
+.paging-form{
+    width:100%;
+    margin-top:3.125rem;
+}
+
+.paging-form .paging-box{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:0.375rem;
+}
+
+.paging-form .paging-box .paging-con{
+    width:2rem;
+    height:2rem;
+}
+
+.paging-form .paging-box .paging-con a{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:100%;
+    border-radius: 0.3125rem;
+}
+
+.paging-form .paging-box .paging-con .page-arrow{
+    background:#fff;
+    border:0.0625rem solid #e5e8eb;
+}
+
+.paging-form .paging-box .paging-con .page-number{
+    background:#fafbfc;
+    font-size:0.875rem;
+    font-weight:500;
+    color:#656a71;
+    letter-spacing: -0.35px;
+}
+
+.paging-form .paging-box .paging-con .page-number.active{
+    background:#333d4b;
+    color:#fff;
+}
+
+/* select */
+.select-form{
+    width: 7.5rem;
+}
+
+.select-form .select-box{
+    width:100%;
+    position:relative;
+}
+
+.select-form .select-box .choice-box{
+    height:2.25rem;
+    display:flex;
+    align-items: center;
+    position:relative;
+    padding:0 1.375rem 0 1.375rem;
+    cursor: pointer;
+    font-size:0.875rem;
+    font-weight:700;
+    color:#44474b;
+    letter-spacing: -0.5px;
+}
+
+.select-form .select-box .choice-box::after{
+    content:"";
+    display:block;
+    width:0.5625rem;
+    height:0.375rem;
+    background:url("../images/common/select_arrow.png") no-repeat center;
+    background-size: contain;
+    position: absolute;
+    right:0.4375rem;
+    top:50%;
+    transform: translate( -0, -50% );
+}
+
+.select-form .select-box .select-list{
+    width:100%;
+    position: absolute;
+    left:0;
+    top:2.25rem;
+    background: #fff;
+    z-index: 1;
+    border:0.0625rem solid #e5e8eb;
+    border-radius: 0.3125rem;
+    display:none;
+}
+
+.select-form .select-box .select-list .option{
+    width:100%;
+    height:2.25rem;
+    padding:0 1rem;
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+    font-size:0.8125rem;
+    color:#121519;
+    letter-spacing: -0.5px;
+}
+
+.select-form .select-box .select-list .option.active{
+    font-weight:700;
+}
+
+.select-form .select-box .select-list .option:hover{
+    background:#f4f6fa;
+}
+
+.select-form.box-type .select-box .choice-box{
+    border:0.0625rem solid #e5e8eb;
+    border-radius: 0.3125rem;
+    padding:0 0.9375rem 0 0.9375rem;
+}
+
+/* 공통 check box */
+.check-form{
+    width:100%;
+}
+
+.check-form .check-box{
+    width:100%;
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:0.625rem 2.5rem;
+}
+
+.check-form .check-box .check-con{
+    display:flex;
+    align-items: center;
+}
+
+.check-form .check-box .check-con input[type="checkbox"]{
+    display:none;
+}
+
+.check-form .check-box .check-con input[type="checkbox"]:disabled + label i{
+    border:0.0625rem solid #ccd1d8;
+    background:#e5e8eb;
+}
+
+.check-form .check-box .check-con label{
+    display:flex;
+    align-items: center;
+    gap:0.4375rem;
+}
+
+.check-form .check-box .check-con label i{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:1.25rem;
+    height:1.25rem;
+    background:#fff;
+    border:0.0625rem solid #ccd1d8;
+    border-radius: 0.3125rem;
+}
+
+.check-form .check-box .check-con label .check-txt{
+    font-size:0.8125rem;
+    font-weight:500;
+    color:#656a71;
+    letter-spacing: -0.2px;
+}
+
+.check-form .check-box .check-con label:hover i{
+    border:0.0625rem solid #44474b;
+}
+
+.check-form .check-box .check-con input[type="checkbox"]:checked + label i{
+    border:0.0625rem solid #153a87;
+    background:#153a87;
+
+}
+
+.check-form .check-box .check-con input[type="checkbox"]:checked + label i::before{
+    content:"";
+    display: block;
+    width:0.62875rem;
+    height:0.5625rem;
+    background:url("../images/contents/check_ico.png") no-repeat center;
+    background-size: contain;
+}
+
+
+/* 공통 layer popup */
+.layer-pop{
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100vh;
+    z-index: 9999;
+    display:none;
+}
+
+.layer-pop .dim{
+    position: fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.layer-pop .layer-form{
+    width:100%;
+    position: fixed;
+    left:50%;
+    top:50%;
+    z-index: 2;
+    transform: translate( -50%, -50% );
+    padding:0 1.25rem;
+}
+
+.layer-pop .layer-form .layer-box{
+    width:100%;
+    max-width:70.625rem;
+    border-radius: 0.625rem;
+    margin:0 auto;
+}
+
+.layer-pop .layer-form .layer-box .layer-head{
+    width:100%;
+    height:4.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 1.875rem 0 2rem;
+    background:#434f60;
+    border-radius: 0.625rem 0.625rem 0 0;
+}
+
+.layer-pop .layer-form .layer-box .layer-head .layer-title{
+    font-size:1.25rem;
+    font-weight:500;
+    color:#fff;
+    letter-spacing: -0.2px;
+}
+
+.layer-pop .layer-form .layer-box .layer-head .layer-close-btn{
+    background:transparent;
+}
+
+.layer-pop .layer-form .layer-box .layer-body{
+    width:100%;
+    padding:1.875rem 1.875rem 2.5rem 1.875rem;
+    border-radius: 0 0 0.625rem 0.625rem;
+    background:#fff;
+    max-height: calc( 100vh - 6.875rem );
+    overflow-y: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* margin */
+.mgt0{margin-top:0 !important;}
+.mgt5{margin-top:0.3125rem;}
+.mgt10{margin-top:0.625rem;}
+.mgt20{margin-top:1.25rem;}
+.mgt30{margin-top:1.875rem;}
+.mgt40{margin-top:2.5rem;}
+.mgt50{margin-top:3.125rem;}
+.mgt60{margin-top:3.75rem;}
+.mgt70{margin-top:4.375rem;}
+.mgt80{margin-top:5rem;}
+.mgt90{margin-top:5.625rem;}
+.mgt100{margin-top:6.25rem;}
+
+.mgb5{margin-bottom:0.3125rem;}
+.mgb10{margin-bottom:0.625rem;}
+.mgb20{margin-bottom:1.25rem;}
+.mgb30{margin-bottom:1.875rem;}
+.mgb40{margin-bottom:2.5rem;}
+.mgb50{margin-bottom:3.125rem;}
+.mgb60{margin-bottom:3.75rem;}
+.mgb70{margin-bottom:4.375rem;}
+.mgb80{margin-bottom:5rem;}
+.mgb90{margin-bottom:5.625rem;}
+.mgb100{margin-bottom:6.25rem;}
+
+.mgr5{margin-right:0.3125rem;}
+.mgr10{margin-right:0.625rem;}
+.mgr20{margin-right:1.25rem;}
+.mgr30{margin-right:1.875rem;}
+.mgr40{margin-right:2.5rem;}
+.mgr50{margin-right:3.125rem;}
+.mgr60{margin-right:3.75rem;}
+.mgr70{margin-right:4.375rem;}
+.mgr80{margin-right:5rem;}
+.mgr90{margin-right:5.625rem;}
+.mgr100{margin-right:6.25rem;}
+
+.mgl5{margin-left:0.3125rem;}
+.mgl10{margin-left:0.625rem;}
+.mgl20{margin-left:1.25rem;}
+.mgl30{margin-left:1.875rem;}
+.mgl40{margin-left:2.5rem;}
+.mgl50{margin-left:3.125rem;}
+.mgl60{margin-left:3.75rem;}
+.mgl70{margin-left:4.375rem;}
+.mgl80{margin-left:5rem;}
+.mgl90{margin-left:5.625rem;}
+.mgl100{margin-left:6.25rem;}
+
+/* padding */
+.pd5{padding:0.3125rem;}
+.pd10{padding:0.625rem;}
+.pd20{padding:1.25rem;}
+.pd30{padding:1.875rem;}
+.pd40{padding:2.5rem;}
+.pd50{padding:3.125rem;}
+
+.pdt5{padding-top:0.3125rem;}
+.pdt10{padding-top:0.625rem;}
+.pdt20{padding-top:1.25rem;}
+.pdt30{padding-top:1.875rem;}
+.pdt40{padding-top:2.5rem;}
+.pdt50{padding-top:3.125rem;}
+
+.pdb5{padding-bottom:0.3125rem;}
+.pdb10{padding-bottom:0.625rem;}
+.pdb20{padding-bottom:1.25rem;}
+.pdb30{padding-bottom:1.875rem;}
+.pdb40{padding-bottom:2.5rem;}
+.pdb50{padding-bottom:3.125rem;}
+
+.pdr5{padding-right:0.3125rem;}
+.pdr10{padding-right:0.625rem;}
+.pdr20{padding-right:1.25rem;}
+.pdr30{padding-right:1.875rem;}
+.pdr40{padding-right:2.5rem;}
+.pdr50{padding-right:3.125rem;}
+
+.pdl5{padding-left:0.3125rem;}
+.pdl10{padding-left:0.625rem;}
+.pdl20{padding-left:1.25rem;}
+.pdl30{padding-left:1.875rem;}
+.pdl40{padding-left:2.5rem;}
+.pdl50{padding-left:3.125rem;}
+
+/* flex gap */
+.flex-gap5{gap:0.3125rem;}
+.flex-gap10{gap:0.625rem;}
+.flex-gap20{gap:1.25rem;}
+.flex-gap30{gap:1.875rem;}
+.flex-gap40{gap:2.5rem;}
+.flex-gap50{gap:3.125rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
