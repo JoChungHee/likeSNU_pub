@@ -22,7 +22,20 @@
             initReportTabs();
             filterTabSet();
             
+            collegeNameSet();
+
         });
+
+        // 대학 이름 불러오기
+        function collegeNameSet(){
+            var collegeName = $(".college-check .select-list .option.active").text();
+            $(".college-name").text(collegeName);
+        }
+
+        // 비교분석 버튼 클릭시 대학 이름 적용
+        function compareBtn(){
+            collegeNameSet();
+        }
 
     </script>
 </head>
@@ -167,7 +180,7 @@
         </div>
         <!-- S: lnb -->
 
-        <!-- S: 연구현황 -->
+        <!-- S: 인용 저널 분석 -->
         <section class="report-section" >
             <div class="section-con">
                 <div class="report-form">
@@ -188,53 +201,133 @@
                                 타대학 선택
                             </div>
                             <div class="college-select-box">
-                                <div class="select-form">
-                                    <div class="select-box">
-                                        <div class="choice-box">논문수 높임 순</div>
+                                <div class="select-form box-type">
+                                    <div class="select-box college-check">
+                                        <div class="choice-box">한국과학기술원(KAIST)</div>
                                         <ul class="select-list">
                                             <li class="option ">선택</li>
-                                            <li class="option active">논문수 높임 순</li>
+                                            <li class="option active">한국과학기술원(KAIST)</li>
+                                            <li class="option ">한양대학교</li>
                                         </ul>
                                     </div>
                                 </div>
-                                <button type="button" class="compare-btn" >비교분석</button>
+                                <button type="button" class="compare-btn" onclick="compareBtn();" >비교분석</button>
                             </div>
                         </div>
                     </div>
                     <!-- E: 페이지 타이틀 -->
 
-                    <!-- S: 연구현황 컨텐츠  -->
+                    <!-- S: 인용 저널 분석  -->
                     <div class="report-box">
                         <div class="box-title">
-                            연구현황
+                            [<span>SNU</span>] - [<span class="college-name">한국과학기술원(KAIST)</span>] 인용 저널 분석
                         </div>
 
-                        
+                        <div class="journal-form">
+                            <div class="journal-box graph-type">
+                                <div class="journal-head">
+                                    <div class="title">투고 인기 저널</div>
+                                </div>
+                                <div class="journal-con">
+                                    <div class="chart-box">
+                                        <!-- 차트 영역 - 퍼블은 이미지 대체 -->
+                                        <img src="../resources/images/sample/sample_graph10.png"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="journal-box info-type">
+                                <div class="journal-head">
+                                    <div class="title">저널정보</div>
+                                    <button type="button" class="thesis-btn" >논문 목록</button>
+                                </div>
+                                <div class="journal-con">
+                                    <ul class="journal-info">
+                                        <li class="journal-info-con">
+                                            <div class="title">ISSN</div>
+                                            <div class="txt">
+                                                0944-1344,1614-7499
+                                            </div>
+                                        </li>
+
+                                        <li class="journal-info-con">
+                                            <div class="title">
+                                                논문 수
+                                            </div>
+                                            <div class="txt">
+                                                1,537
+                                            </div>
+                                        </li>
+
+                                        <li class="journal-info-con">
+                                            <div class="title">
+                                                피인용 수
+                                            </div>
+                                            <div class="txt">
+                                                94,810
+                                            </div>
+                                        </li>
+
+                                        <li class="journal-info-con">
+                                            <div class="title">
+                                                CiteScore
+                                            </div>
+                                            <div class="txt">
+                                                <p>
+                                                    Environamental Chemisty - 22.109%(Q1)
+                                                </p>
+                                                <p>
+                                                    Health, Toxicology and Mutagenesis-15.554%(Q1)
+                                                </p>
+                                                <p>
+                                                    Pollution-18.263%(Q1)
+                                                </p>
+                                            </div>
+                                        </li>
+
+                                        <li class="journal-info-con">
+                                            <div class="title"></div>
+                                            <div class="txt"></div>
+                                        </li>
+
+                                        <li class="journal-info-con">
+                                            <div class="title"></div>
+                                            <div class="txt"></div>
+                                        </li>
+
+                                        <li class="journal-info-con">
+                                            <div class="title"></div>
+                                            <div class="txt"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <!-- E: 연구현황 컨텐츠  -->
+                    <!-- E: 인용 저널 분석  -->
 
                 </div>
             </div>
         </section>
-        <!-- E: 연구현황 -->
+        <!-- E: 인용 저널 분석 -->
 
-        <!-- S: 연구 주제 분석 -->
+        <!-- S: 인용한 저널 -->
         <section class="report-section blue-section" >
             <div class="section-con">
                 <div class="report-form">
-                    <!-- S: 연구 주제 분석 컨텐츠  -->
+                    <!-- S: SNU 인용한 저널  -->
                     <div class="report-box">
                         <div class="box-title">
-                            연구 주제 분석
+                            [<span>SNU</span>]만 인용한 저널
                         </div>
 
                         
                     </div>
-                    <!-- E: 연구 주제 분석 컨텐츠  -->
+                    <!-- E: SNU 인용한 저널  -->
                 </div>
             </div>
         </section>
-        <!-- E: 연구 주제 분석 -->
+        <!-- E: 인용한 저널 -->
     </div>
     <!-- E:Contents -->
 

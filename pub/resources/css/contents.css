@@ -2920,6 +2920,13 @@
     letter-spacing: -0.2px;
 }
 
+.report-form .report-box .box-title span{
+    font-size: 1.25rem;
+    font-weight:700;
+    color:#153a87;
+    letter-spacing: -0.2px;
+}
+
 .report-form .report-box .report-con{
     width:100%;
     margin-top:1.875rem;
@@ -3705,6 +3712,7 @@
 .report-head .college-select-form{
     display:flex;
     align-items: center;
+    gap:0.8125rem;
 }
 
 .report-head .college-select-form .title{
@@ -3713,12 +3721,31 @@
     color:#656a71;
 }
 
+.report-head .college-select-form .college-select-box{
+    display:flex;
+    align-items: center;
+    gap:0.25rem;
+}
 
+.report-head .college-select-form .college-select-box .select-form{
+    width:12.5rem;    
+}
 
+.report-head .college-select-form .college-select-box .compare-btn{
+    height:2.25rem;
+    padding:0 0.75rem;
+    border-radius: 0.25rem;
+    background:#8e94a0;
+    font-size:0.75rem;
+    font-weight:600;
+    color:#fff;
+    letter-spacing: -0.2px;
+}
 
-
-
-
+.report-form .report-box .journal-form{
+    width:100%;
+    margin-top:2rem;
+}
 
 
 

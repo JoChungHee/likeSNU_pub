@@ -84,8 +84,19 @@ function contentsTab(){
 }
 
 //26.01.08 추가됨
+//26.01.12 수정됨
+//수정내용 - 기존 = 클릭시에만 / 수정 = 기본적으로 active 텍스트 불러옴
 //공통 select box
 function selectSet(){
+    $(".select-form").each(function () {
+        var $selectForm = $(this);
+        var $activeOption = $selectForm.find(".option.active");
+
+        if ($activeOption.length) {
+            $selectForm.find(".choice-box").text($activeOption.text());
+        }
+    });
+
     $(document).on("click", ".select-form .choice-box", function (e) {
         e.stopPropagation();
 
@@ -107,7 +118,6 @@ function selectSet(){
         $option.addClass("active");
 
         $selectForm.find(".choice-box").text(text);
-
         $selectForm.find(".select-list").slideUp(200);
     });
 
