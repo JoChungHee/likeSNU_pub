@@ -339,6 +339,22 @@
         width:100%;
         margin-top:1rem;
     }
+
+    .report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-row{
+        min-width:54.625rem;
+    }
+
+    .report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-row .journal-tbl-cell:nth-child(2){
+        width:10.625rem;
+    }
+
+    .report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-row .journal-tbl-cell:nth-child(3){
+        width:13.75rem;
+    }
+
+    .report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-row .journal-tbl-cell:nth-child(4){
+        width:8.125rem;
+    }
 }
 
 @media screen and (max-width:520px) {
