@@ -2861,6 +2861,7 @@
     align-items: center;
     justify-content: space-between;
     width:100%;
+    flex-wrap: wrap;
 }
 
 .report-form .report-head .report-title{
@@ -3745,7 +3746,215 @@
 .report-form .report-box .journal-form{
     width:100%;
     margin-top:2rem;
+    display:flex;
+    gap:3.75rem;
+    flex-wrap: wrap;
 }
+
+.report-form .report-box .journal-form .journal-box{
+
+}
+
+.report-form .report-box .journal-form .journal-box.graph-type{
+    width:calc( 100% - 25.625rem );
+}
+
+.report-form .report-box .journal-form .journal-box.info-type{
+    width:21.875rem;
+}
+
+.report-form .report-box .journal-form .journal-box .journal-head{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.report-form .report-box .journal-form .journal-box .journal-head .title{
+    font-size:1.125rem;
+    font-weight:700;
+    color:#333d4b;
+    letter-spacing: -0.2px;
+}
+
+.report-form .report-box .journal-form .journal-box .journal-head .thesis-btn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:0.625rem;
+    border-radius: 0.25rem;
+    background:#0d2f5c;
+    font-size:0.75rem;
+    font-weight: 700;
+    color:#fff;
+    letter-spacing: -0.2px;
+}
+
+.report-form .report-box .journal-form .journal-box .journal-con{
+    width:100%;
+    margin-top:0.75rem;    
+}
+
+.report-form .report-box .journal-form .journal-box.graph-type .journal-con{
+    margin-top:1.375rem;
+}
+
+.report-form .report-box .journal-form .journal-box .journal-con .journal-info{
+    width:100%;
+    border-top:0.0625rem solid #e5e8eb;
+}
+
+.report-form .report-box .journal-form .journal-box .journal-con .journal-info .journal-info-con{
+    display:flex;
+    gap:0.375rem;
+    padding:1.25rem 0;
+    border-bottom:0.0625rem solid #e5e8eb;
+}
+
+.report-form .report-box .journal-form .journal-box .journal-con .journal-info .journal-info-con .title{
+    width:5.625rem;
+    padding:0 0.5rem;
+    font-size:0.9375rem;
+    font-weight:700;
+    color:#44474b;
+    letter-spacing: -0.2px;
+    line-height:1.4;
+}
+
+.report-form .report-box .journal-form .journal-box .journal-con .journal-info .journal-info-con .txt{
+    width:calc(100% - 6rem);
+}
+
+.report-form .report-box .journal-form .journal-box .journal-con .journal-info .journal-info-con .txt p{
+    font-size:0.875rem;
+    font-weight: 400;
+    color:#656a71;
+    letter-spacing: -0.2px;
+    line-height:1.4;
+}
+
+.report-form .report-box .journal-form .journal-box .journal-con .journal-info .journal-info-con .txt p + p{
+    margin-top:1.125rem;    
+}
+
+.report-form .report-box .journal-tbl-form{
+    width:100%;
+    overflow: auto;
+    padding:1.875rem;
+    background:#fff;
+    margin-top:1.25rem;
+    border:0.625rem;
+}
+
+.report-form .report-box .journal-tbl-form .journal-tbl{
+    width:100%;
+}
+
+.report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-head{
+    width:100%;
+}
+
+.report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-row{
+    width:100%;
+    display:flex;
+    align-items: center;
+    padding:0.5rem 0;
+    min-height:3rem;
+    border-radius: 0.3125rem;
+    min-width:66.875rem;
+}
+
+.report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-row .journal-tbl-cell{
+    font-size:0.875rem;
+    letter-spacing: -0.2px;
+    padding:0 1.25rem;
+    text-align: center;
+}
+
+.report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-row .journal-tbl-cell:nth-child(1){
+    width:3.5rem;
+}
+
+.report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-row .journal-tbl-cell:nth-child(2){
+    width:15.25rem;
+}
+
+.report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-row .journal-tbl-cell:nth-child(3){
+    width:17.25rem;
+}
+
+.report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-row .journal-tbl-cell:nth-child(4){
+    width:11.9375rem;
+    padding:0 0.625rem;
+}
+
+.report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-row .journal-tbl-cell:nth-child(5){
+    width:8.25rem;
+}
+
+.report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-row .journal-tbl-cell:nth-child(6){
+    width:10.625rem;
+}
+
+.report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-head .journal-tbl-row .journal-tbl-cell{
+    font-weight: 700;
+    color:#333d4b;
+    
+}
+
+.report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-body .journal-tbl-row:nth-child(2n-1){
+    background:#fbfcfd;
+}
+
+.report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-body .journal-tbl-row .journal-tbl-cell{
+    font-weight: 500;
+    color:#44474b;
+}
+
+.report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-body .journal-tbl-row .journal-tbl-cell:nth-child(1){
+    font-weight:700;
+    color:#121519;
+}
+
+.report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-body .journal-tbl-row .journal-tbl-cell .btn-box{
+    display:flex;
+    gap:0.25rem;
+}
+
+.report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-body .journal-tbl-row .journal-tbl-cell .btn-box .btn{
+    width:4rem;
+    height:2rem;
+    border-radius: 0.25rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size:0.75rem;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+}
+
+.report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-body .journal-tbl-row .journal-tbl-cell .btn-box .btn.btn-blue{
+    background:#0d2f5c;
+    color:#fff;
+}
+
+.report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-body .journal-tbl-row .journal-tbl-cell .btn-box .btn.btn-gray{
+    background:#e5e8eb;
+    color:#656a71;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

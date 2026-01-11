@@ -325,7 +325,6 @@ function reportLnbSet(){
                 $lnbBox.show();
             } else {
                 $lnbBox.hide();
-                setActiveTitle();
             }
         });
     }

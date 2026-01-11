@@ -84,6 +84,14 @@
     #cooperationPop .cooperation-form .cooperation-right{
         width:100%;
     }
+
+    .report-form .report-box .journal-form .journal-box.graph-type{
+        width:100%;
+    }
+
+    .report-form .report-box .journal-form .journal-box.info-type{
+        width:100%;
+    }
 }
 
 @media screen and (max-width: 920px){
@@ -327,6 +335,10 @@
         width:100%;
     }
 
+    .report-head .college-select-form{
+        width:100%;
+        margin-top:1rem;
+    }
 }
 
 @media screen and (max-width:520px) {
