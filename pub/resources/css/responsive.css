@@ -92,6 +92,7 @@
     .report-form .report-box .journal-form .journal-box.info-type{
         width:100%;
     }
+
 }
 
 @media screen and (max-width: 920px){
@@ -101,6 +102,14 @@
     }
 
     .ai-result-form .result-form .result-list .result-box{
+        width:100%;
+    }
+
+    .analysis-section .analysis-tbl-form .analysis-tbl{
+        min-width:64rem;
+    }
+
+    .analysis-section .analysis-flex .analysis-box{
         width:100%;
     }
 }
@@ -120,6 +129,14 @@
 
     /* 리포트 */
     .view-tab-box .view-tab-con .join-form .join-box{
+        width:100%;
+    }
+
+    .report-form .report-box .report-con .title-box .con-title{
+        flex-wrap: wrap;
+    }
+
+    .report-form .report-box .report-con .title-box .con-title .sub{
         width:100%;
     }
 
@@ -354,6 +371,22 @@
 
     .report-form .report-box .journal-tbl-form .journal-tbl .journal-tbl-row .journal-tbl-cell:nth-child(4){
         width:8.125rem;
+    }
+
+    .analysis-section .analysis-tbl-form .analysis-tbl{
+        min-width:54.625rem;
+    }
+
+    .analysis-section .analysis-tbl-form .analysis-tbl.journal-tbl02 .analysis-row .analysis-cell:nth-child(4){
+        width:16%;
+    }
+
+    .analysis-section .analysis-tbl-form .analysis-tbl.journal-tbl02 .analysis-row .analysis-cell:nth-child(5){
+        width:10%;
+    }
+
+    .analysis-section .analysis-tbl-form .analysis-tbl .analysis-row .analysis-cell.number{
+        width:5%;
     }
 }
 
