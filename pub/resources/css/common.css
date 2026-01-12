@@ -216,6 +216,12 @@ header .page-header .page-header-box .page-title{
     flex-wrap: wrap;
 }
 
+header .page-header .page-header-box .page-title span{
+    font-size:2rem;
+    font-weight:700;
+    color:#2345c8;
+}
+
 header .page-header .page-header-box .page-title .header-select{
     display:flex;
     align-items: center;
@@ -677,12 +683,12 @@ footer .copylight::before{
 .pdl50{padding-left:3.125rem;}
 
 /* flex gap */
-.flex-gap5{gap:0.3125rem;}
-.flex-gap10{gap:0.625rem;}
-.flex-gap20{gap:1.25rem;}
-.flex-gap30{gap:1.875rem;}
-.flex-gap40{gap:2.5rem;}
-.flex-gap50{gap:3.125rem;}
+.flex-gap5{gap:0.3125rem !important;}
+.flex-gap10{gap:0.625rem !important;}
+.flex-gap20{gap:1.25rem !important;}
+.flex-gap30{gap:1.875rem !important;}
+.flex-gap40{gap:2.5rem !important;}
+.flex-gap50{gap:3.125rem !important;}
 
 
 

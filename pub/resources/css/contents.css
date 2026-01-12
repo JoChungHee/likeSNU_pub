@@ -2915,14 +2915,14 @@
 }
 
 .report-form .report-box .box-title{
-    font-size: 1.25rem;
+    font-size: 1.375rem;
     font-weight:700;
     color:#333d4b;
     letter-spacing: -0.2px;
 }
 
 .report-form .report-box .box-title span{
-    font-size: 1.25rem;
+    font-size: 1.375rem;
     font-weight:700;
     color:#153a87;
     letter-spacing: -0.2px;
@@ -2978,12 +2978,28 @@
     font-weight:700;
     color:#333d4b;
     letter-spacing: -0.2px;
+
+}
+
+.report-form .report-box .report-con .title-box .con-title .ai-ico + .title{
+    padding-left:0;
+}
+
+.report-form .report-box .report-con .title-box .con-title .ai-ico + .title::before{
+    display: none;
 }
 
 .report-form .report-box .report-con .title-box .con-title .sub{
     font-size:0.9375rem;
     font-weight: 500;
     color:#8e94a0;
+    letter-spacing: -0.2px;
+}
+
+.report-form .report-box .report-con .title-box .con-title .sub span{
+    font-size:0.9375rem;
+    font-weight: 500;
+    color:#121519;
     letter-spacing: -0.2px;
 }
 
@@ -3067,7 +3083,22 @@
     font-size:0.875rem;
     font-weight:500;
     color:#656a71;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.5px;
+    line-height:1.5;
+    position: relative;
+    padding-left:0.625rem;
+}
+
+.report-form .report-box .report-con .report-ai-box .report-ai-con .report-ai-list .report-ai .summary p::before{
+    content:"";
+    display: block;
+    width:0.25rem;
+    height:0.25rem;
+    border-radius: 0.25rem;
+    background:#ccd1d8;
+    position: absolute;
+    left:0;
+    top:0.5rem;
 }
 
 .report-form .report-box .report-con .report-ai-box .report-ai-con .report-ai-list .report-ai .summary p + p{
@@ -3361,6 +3392,20 @@
     font-weight:700;
     color:#333d4b;
     letter-spacing: -0.2px;
+    position: relative;
+    padding-left:1rem;
+}
+
+.join-report-form .join-report-box .join-report-con .title::before{
+    content:"";
+    display: block;
+    width:0.5rem;
+    height:0.5rem;
+    border-radius: 0.5rem;
+    background: #006be3;
+    position:absolute;
+    left:0;
+    top:0.375rem;
 }
 
 .join-report-form .join-report-box .join-report-con .report-cont{
@@ -3942,18 +3987,174 @@
     color:#656a71;
 }
 
+.report-form .report-box + .view-tab-form{
+    margin-top:1.25rem;
+}
 
+/* 분석 */
+.analysis-section{
+    margin-top:3.125rem;
+}
 
+.analysis-section + .analysis-section{
+    margin-top:5.625rem;
+}
 
+.analysis-section:last-child{
+    padding-bottom:8.75rem;
+}
 
+.analysis-section .analysis-head{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.analysis-section .analysis-head .title-box{
+    display:flex;
+    align-items: flex-end;
+    gap:0.25rem;
+}
 
+.analysis-section .analysis-head .title-box .title{
+    font-size:1.375rem;
+    font-weight:700;
+    color:#333d4b;
+    letter-spacing: -0.2px;
+}
 
+.analysis-section .analysis-head .title-box .title span{
+    font-size:1.375rem;
+    font-weight:700;
+    color:#2345c8;
+    letter-spacing: -0.2px;
+}
 
+.analysis-section .analysis-head .title-box .sub{
+    font-size:0.8125rem;
+    font-weight:700;
+    color:#44474b;
+    letter-spacing: -0.2px;
+}
 
+.analysis-section .analysis-head .head-right .txt{
+    font-size:0.8125rem;
+    font-weight:500;
+    color:#656a71;
+    letter-spacing: -0.2px;
+}
 
+.analysis-section .analysis-head .filter-box{
+    display:flex;
+    align-items: center;
+    gap:0.25rem;
+}
 
+.analysis-section .analysis-head .filter-box .title{
+    font-size:0.875rem;
+    font-weight:600;
+    color:#656a71;
+    letter-spacing: -0.2px;
+}
 
+.analysis-section .analysis-tbl-form{
+    width:100%;
+    overflow: auto;
+    margin-top:0.5625rem;
+}
+
+.analysis-section .analysis-tbl-form .analysis-tbl{
+    width:100%;
+    min-width:66.875rem;
+}
+
+.analysis-section .analysis-tbl-form .analysis-tbl .analysis-tbl-head{
+    padding:1.375rem 0;
+    border-bottom:0.0625rem solid #e5e8eb;
+}
+
+.analysis-section .analysis-tbl-form .analysis-tbl .analysis-tbl-head .analysis-row{
+    width:100%;
+    display:flex;
+    align-items: center;
+}
+
+.analysis-section .analysis-tbl-form .analysis-tbl .analysis-tbl-head .analysis-row .analysis-cell{
+    font-size:0.9375rem;
+    font-weight:600;
+    color:#333d4b;
+    letter-spacing: -0.2px;
+}
+
+.analysis-section .analysis-tbl-form .analysis-tbl .analysis-tbl-body{
+    width:100%;
+    margin-top:1.25rem;
+}
+
+.analysis-section .analysis-tbl-form .analysis-tbl .analysis-tbl-body .analysis-row{
+    width:100%;
+    display:flex;
+    align-items: center;
+    border-radius: 0.3125rem;
+    padding:1.25rem 0;
+}
+
+.analysis-section .analysis-tbl-form .analysis-tbl .analysis-tbl-body .analysis-row:nth-child(2n-1){
+    background:#fbfcfd;
+}
+
+.analysis-section .analysis-tbl-form .analysis-tbl .analysis-tbl-body .analysis-row .analysis-cell{
+    font-size:1rem;
+    font-weight:500;
+    color:#44474b;
+    letter-spacing: -0.2px;
+}
+
+.analysis-section .analysis-tbl-form .analysis-tbl .analysis-row .analysis-cell{
+    padding:0 1rem;
+    text-align: center;
+}
+
+.analysis-section .analysis-tbl-form .analysis-tbl .analysis-row .analysis-cell.number{
+    width:3.875rem;
+    text-align: center;
+    padding:0;
+    font-weight: 700;
+    color:#121519;
+}
+
+.analysis-section .analysis-tbl-form .analysis-tbl .analysis-row .analysis-cell .blue-txt{
+    font-size:1rem;
+    font-weight:500;
+    color:#153a87;
+    letter-spacing: -0.2px;
+}
+
+.analysis-section .analysis-tbl-form .analysis-tbl.journal-tbl01 .analysis-row .analysis-cell:nth-child(2){
+    width:calc( 100% - 57.625rem );
+    min-width:17.5rem;
+}
+
+.analysis-section .analysis-tbl-form .analysis-tbl.journal-tbl01 .analysis-row .analysis-cell:nth-child(3){
+    width:100%;
+    max-width:23.375rem;
+}
+
+.analysis-section .analysis-tbl-form .analysis-tbl.journal-tbl01 .analysis-row .analysis-cell:nth-child(4){
+    width:100%;
+    max-width:12.375rem;
+}
+
+.analysis-section .analysis-tbl-form .analysis-tbl.journal-tbl01 .analysis-row .analysis-cell:nth-child(5){
+    width:100%;
+    max-width:12.5rem;
+}
+
+.analysis-section .analysis-tbl-form .analysis-tbl.journal-tbl01 .analysis-row .analysis-cell:nth-child(6){
+    width:100%;
+    max-width:9.375rem;
+}
 
 
 
